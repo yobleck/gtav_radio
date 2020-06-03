@@ -1,4 +1,4 @@
-# gtav_radio
+# GTA V  Radio
 gta v radio stand alone program
 
 WIP this is just a placeholder for now
