@@ -1,0 +1,130 @@
+#main file
+#runs curses for ui and user input and spawns threads for the actual radio
+import curses;
+from curses import panel;
+import multiprocessing;
+#from multiprocessing import Process, Queue;
+import test_station;
+import time, math;
+
+def create_thread(input_station): #allows calling the same thread over and over
+    temp = multiprocessing.Process(target=input_station.run, args=());
+    temp.daemon = True;
+    return temp;
+
+def kill_audio(thread):
+    thread.kill(); #kill child
+    thread.join(); #re-kill zombie child
+    return False;
+
+#"""
+def main(stdscr):
+    #curses initializers
+    curses.use_default_colors();
+    curses.curs_set(0);
+    term_h, term_w = stdscr.getmaxyx();
+    
+    #other initializers
+    station_list = ["LOS SANTOS ROCK RADIO", "NON STOP POP FM", "RADIO LOS SANTOS", "CHANNEL X", "TALK 1", "REBEL RADIO", "SOULWAX FM", "EAST LOS FM", "WEST COAST CLASSICS", "TALK 2", "THE BLUE ARK", "WORLDWIDE FM", "FLYLO FM", "THE LOW DOWN 91.1", "RADIO MIRROR PARK", "SPACE 103.2", "VINEWOOD BOULEVARD RADIO", "THE LAB", "BLONDED LOS SANTOS 97.8 FM", "LOS SANTOS UNDERGROUND RADIO", "iFRUIT RADIO", "SELF RADIO"];
+    current_station = None; #read from settings.ini
+    highlighted_station = 0;
+    running = True;
+    is_playing = False;
+    
+    #displays logo
+    logo_scr = curses.newwin(math.floor(3*term_h/4),math.floor(term_w/2),0,0); #(height, width, start_y, start_x)
+    logo_scr.box();
+    logo_scr.addstr(1,1,"logo");
+    logo_scr.refresh();
+    
+    #displays list of stations
+    main_menu_scr = curses.newwin(math.floor(term_h),math.floor(term_w/2),0,math.floor(term_w/2));
+    main_menu_scr.box();
+    for x in range(1,len(station_list)):
+        main_menu_scr.addnstr(x,1,station_list[x-1],main_menu_scr.getmaxyx()[1]-2);
+    main_menu_scr.refresh();
+    main_menu_in_focus = True;
+    
+    #displays currently playing station and song
+    station_scr = curses.newwin(math.floor(3*term_h/4),math.floor(term_w/2),0,math.floor(term_w/2));
+    station_scr.addstr(1,1,"test station");
+    
+    #displays settings menu
+    settings_scr = curses.newwin(term_h,term_w,0,0); 
+    settings_scr.addstr("404 settings not found");
+    settings_visible = False;
+    
+    test_scr = curses.newwin(math.floor(term_h/4),math.floor(term_w/2),math.floor(3*term_h/4),0);
+    test_scr.nodelay(True); #allows loop to run without waiting for input
+    
+    
+    #main do stuff loop
+    while(running):
+        x = test_scr.getch();
+        if(x != -1):
+            test_scr.addstr(str(x));
+            test_scr.refresh();
+        
+        if(x == 27): #kill while loop
+            running = False;
+        
+        if(x == 49 and not is_playing): #play audio test
+            audio_thread = create_thread(test_station);
+            audio_thread.start();
+            is_playing = True;
+            
+        if(x == 10): #enter key to start playing station      #might also want number pad with 2 digit buffer
+            #kill current thread
+            #get highlight number
+            #set current station
+            #call play to specific station
+            pass;
+        if(x == 127): #backspace key to go back to main menu from station screen
+            pass;
+        
+        #kill audio
+        if(x == 113 and "audio_thread" in locals()): 
+            is_playing = kill_audio(audio_thread);
+        try: #kill audio_thread after it finishes    move closer to top of loop?
+            if(audio_thread.is_alive() == False):
+                is_playing = kill_audio(audio_thread); #murder zombie child to prevent horde
+        except:
+            pass;
+        
+        if(x == 47): # /? key for settings. actual editing or just for show?
+            if(settings_visible == False):
+                settings_scr.redrawwin();
+                settings_scr.refresh();
+                settings_visible = True;
+            else:
+                logo_scr.redrawwin();
+                logo_scr.refresh();
+                main_menu_scr.redrawwin();      #wrap all this stuff up in a function
+                main_menu_scr.refresh();
+                test_scr.redrawwin();
+                test_scr.refresh();
+                settings_visible = False;
+        
+        #main menu navigation  TODO: fix qqqqqqqqq issue   something to do with highlighted_station starting at 0 and drawing -1
+        if(x == 107 and main_menu_in_focus): # k key down
+            if(highlighted_station < main_menu_scr.getmaxyx()[0]-5): #keep inbounds
+                main_menu_scr.chgat(highlighted_station,1,len(station_list[highlighted_station-1]),curses.A_NORMAL); #un-highlight
+                highlighted_station += 1;
+                main_menu_scr.chgat(highlighted_station,1,len(station_list[highlighted_station-1]),curses.A_REVERSE); #highlight
+                main_menu_scr.refresh();
+        if(x == 105 and main_menu_in_focus): # i key up
+            if(highlighted_station > 1):
+                main_menu_scr.chgat(highlighted_station,1,len(station_list[highlighted_station-1]),curses.A_NORMAL);
+                highlighted_station -= 1;
+                main_menu_scr.chgat(highlighted_station,1,len(station_list[highlighted_station-1]),curses.A_REVERSE);
+                main_menu_scr.refresh();
+                
+        
+        
+                
+        
+
+        
+#run! returns terminal to sane state if program crashes
+curses.wrapper(main); 
+#"""

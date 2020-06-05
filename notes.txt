@@ -1,0 +1,5 @@
+main passes user input to station on separate thread (kills old thread)
+
+station:
+    has list of if statements controlling flow of audio types i.e. music djspots intros ads news etc.
+
