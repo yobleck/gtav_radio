@@ -4,7 +4,7 @@ import curses;
 from curses import panel;
 import multiprocessing;
 #from multiprocessing import Process, Queue;
-import test_station, station_router;
+import station_router;
 import time, math;
 
 #various helper functions
@@ -18,8 +18,15 @@ def kill_audio(thread):
     thread.join(); #re-kill zombie child
     return False;
 
-def draw_logo(input_station_list, size, input_window): #TODO: use getmaxyx to automatically pick file size
-    logo_file = open("./images/" + str(size) + "/" + input_station_list, "r").readlines();
+def draw_logo(input_station_list, input_window): #TODO: use getmaxyx to automatically pick file size. images might need formatting
+    if(input_window.getmaxyx()[0] < 40):           #or use braile characters with SET_LOCALE LC_ALL
+        logo_file = open("./images/30/" + input_station_list, "r").readlines();
+    elif(input_window.getmaxyx()[0] < 80):
+        logo_file = open("./images/40/" + input_station_list, "r").readlines();
+    elif(input_window.getmaxyx()[0] < 100):
+        logo_file = open("./images/80/" + input_station_list, "r").readlines();
+    else:
+        logo_file = open("./images/100/" + input_station_list, "r").readlines();
     input_window.erase();
     input_window.box();
     for y in range(0, len(logo_file)):
@@ -64,7 +71,11 @@ def main(stdscr):
     settings_scr.addstr("\"esc\" to quit program\n");
     settings_scr.addstr("\"i\" and \"k\" navigate stations\n");
     settings_scr.addstr("\"enter\" to select station\n");
-    settings_scr.addstr("\"q\" to stop station");
+    settings_scr.addstr("\"q\" to stop station\n");
+    settings_scr.addstr("Created by yobleck: https:/www.github.com/yobleck\n");
+    settings_scr.addstr("All artworks are copyright of Rockstar\n");
+    settings_scr.addstr("All songs copyright of their respective owners\n");
+    settings_scr.addstr("coprighted files are not include with this program by default\n");
     settings_visible = False;
     
     test_scr = curses.newwin(math.floor(term_h/4),math.floor(term_w/2),math.floor(3*term_h/4),0);
@@ -73,7 +84,7 @@ def main(stdscr):
     
     #main do stuff loop
     while(running):
-        x = test_scr.getch();
+        x = test_scr.getch(); #get user input
         if(x != -1):
             test_scr.addstr(str(x));
             test_scr.refresh();
@@ -93,14 +104,12 @@ def main(stdscr):
             #get highlight number and set current station
             current_station = highlighted_station;
             #call play to specific station
-            audio_thread = create_thread(-1); #TODO:replace with current_station once station code is ready
+            audio_thread = create_thread(current_station); #TODO:replace with current_station once station code is ready
             audio_thread.start();
             is_playing = True;
-            draw_logo(station_list[current_station-1], 80, logo_scr);
-            test_scr.addstr("cur" + str(current_station));
+            draw_logo(station_list[current_station-1], logo_scr);
+            test_scr.addstr("s" + str(current_station));
             
-        if(x == 127): #backspace key to go back to main menu from station screen
-            pass;
         
         #kill audio with "q"
         if(x == 113 and "audio_thread" in locals()): 
@@ -134,6 +143,7 @@ def main(stdscr):
                 settings_scr.redrawwin();
                 settings_scr.refresh();
                 settings_visible = True;
+                main_menu_in_focus = False;
             else:
                 logo_scr.redrawwin();
                 logo_scr.refresh();
@@ -142,6 +152,7 @@ def main(stdscr):
                 test_scr.redrawwin();
                 test_scr.refresh();
                 settings_visible = False;
+                main_menu_in_focus = True;
                 
         
 #####
