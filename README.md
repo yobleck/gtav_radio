@@ -26,5 +26,5 @@ Backend:
   - Download from here
   - make sure python 3.8 is installed
   - pip install playsound
-  - files to be extracted from FTA V rpfs with openiv and placed in audio_files folder.
+  - files to be extracted from GTA V rpfs with openiv and placed in audio_files folder.
     not included here for legal reasons
