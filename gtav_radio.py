@@ -49,7 +49,7 @@ def main(stdscr):
     is_playing = False;
     
     #displays logo
-    logo_scr = curses.newwin(math.floor(3*term_h/4),math.floor(term_w/2),0,0); #(height, width, start_y, start_x)
+    logo_scr = curses.newwin(term_h-2,math.floor(term_w/2),0,0); #(height, width, start_y, start_x)
     logo_scr.box();
     #logo_scr.addstr(1,1,"logo");
     #draw_logo(station_list[0], 20, logo_scr);
@@ -87,7 +87,7 @@ def main(stdscr):
     settings_scr.addstr("Copyrighted files are not included with this program\n");
     settings_visible = False;
     
-    test_scr = curses.newwin(math.floor(term_h/4),math.floor(term_w/2),math.floor(3*term_h/4),0);
+    test_scr = curses.newwin(1,math.floor(term_w/2),term_h-2,0);
     test_scr.nodelay(True); #allows loop to run without waiting for input
     test_scr.addstr(str(logo_scr.getmaxyx()));
     
@@ -95,6 +95,7 @@ def main(stdscr):
     while(running):
         x = test_scr.getch(); #get user input
         if(x != -1):
+            test_scr.clear();
             test_scr.addstr(str(x));
             test_scr.refresh();
         
