@@ -12,19 +12,19 @@ Backend:
   win:windll.winmm
 
 ## OS Versions:
-  Functioning:
-  WIP:
+  ### Functioning:
+  ### WIP:
     linux
-  Coming:
+  ### Coming:
     Windows 7 (which will hopefully work with 8-10 as well)
     Android through termux app?
-  Probably not happening:
+  ### Probably not happening:
     MacOS, iOS
     website, electron webapp
 
 ## Installation:
-  Download from here
-  make sure python 3.8 is installed
-  pip install playsound
-  files to be extracted from FTA V rpfs with openiv and placed in audio_files folder.
+  - Download from here
+  - make sure python 3.8 is installed
+  - pip install playsound
+  - files to be extracted from FTA V rpfs with openiv and placed in audio_files folder.
     not included here for legal reasons
