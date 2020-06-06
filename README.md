@@ -1,17 +1,17 @@
 # GTA V  Radio
 GTA V radio stand alone program
 
-WIP
+## WIP
 
 Frontend:
 python ncurses 
 
 Backend:
-playsound: https://github.com/TaylorSMarks/playsound
+[playsound](https://github.com/TaylorSMarks/playsound)
   linux:gstreamer
   win:windll.winmm
 
-# OS Versions:
+## OS Versions:
   Functioning:
   WIP:
     linux
@@ -22,7 +22,7 @@ playsound: https://github.com/TaylorSMarks/playsound
     MacOS, iOS
     website, electron webapp
 
-# Installation:
+## Installation:
   Download from here
   make sure python 3.8 is installed
   pip install playsound
