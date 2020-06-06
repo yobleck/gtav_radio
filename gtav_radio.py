@@ -56,12 +56,21 @@ def main(stdscr):
     logo_scr.refresh();
     
     #displays list of stations
-    main_menu_scr = curses.newwin(math.floor(term_h),math.floor(term_w/2),0,math.floor(term_w/2));
+    main_menu_scr = curses.newwin(math.floor(term_h)-1,math.floor(term_w/2),0,math.floor(term_w/2));
     main_menu_scr.box();
     for x in range(1,len(station_list)+1):
         main_menu_scr.addnstr(x,1,station_list[x-1],main_menu_scr.getmaxyx()[1]-2);
+    main_menu_scr.chgat(highlighted_station,1,len(station_list[highlighted_station-1]),curses.A_REVERSE);
     main_menu_scr.refresh();
     main_menu_in_focus = True;
+    
+    #now playing screen
+    now_playing_scr = curses.newwin(1,term_w,term_h-1,0);
+    f = open("./stations/now_playing.txt","r");
+    now_playing_scr.addstr(f.readline());
+    f.close();
+    now_playing_scr.refresh();
+    now_playing_counter = 0;
     
     
     #displays settings menu
@@ -75,7 +84,7 @@ def main(stdscr):
     settings_scr.addstr("Created by yobleck: https:/www.github.com/yobleck\n");
     settings_scr.addstr("All artworks are copyright of Rockstar\n");
     settings_scr.addstr("All songs copyright of their respective owners\n");
-    settings_scr.addstr("coprighted files are not include with this program by default\n");
+    settings_scr.addstr("Copyrighted files are not included with this program\n");
     settings_visible = False;
     
     test_scr = curses.newwin(math.floor(term_h/4),math.floor(term_w/2),math.floor(3*term_h/4),0);
@@ -97,7 +106,7 @@ def main(stdscr):
             audio_thread.start();
             is_playing = True;
             
-        if(x == 10 and current_station != highlighted_station): #enter key to start playing station  #might also want number pad with 2 digit buffer
+        if(x == 10 and current_station != highlighted_station and main_menu_in_focus): #enter key to start playing station
             #kill current thread
             if("audio_thread" in locals()):
                 kill_audio(audio_thread);
@@ -155,7 +164,20 @@ def main(stdscr):
                 main_menu_in_focus = True;
                 
         
-#####
+        #read file to get now playing. jank workaround cause I couldn't be bothered to learn multiprocessing.Value
+        now_playing_counter += 1;
+        if(now_playing_counter % 1000000 == 0): #massive number to avoid unnecessary file IO
+            now_playing_counter = 0;
+            f = open("./stations/now_playing.txt","r");
+            now_playing_scr.clear();
+            now_playing_scr.addstr(0,0,f.readline());
+            f.close();
+            now_playing_scr.refresh();
+        
+#####end while loop
+    f = open("./stations/now_playing.txt","w"); #resets now playing file when program closes
+    f.write("Now Playing: Welcome to GTA V Radio");
+    f.close();
 
 #run! returns terminal to sane state if program crashes
 curses.wrapper(main); 

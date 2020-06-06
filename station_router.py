@@ -1,31 +1,30 @@
-#import os, sys, inspect;
-#cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"stations")))
-#if cmd_subfolder not in sys.path:
-    #sys.path.insert(0, cmd_subfolder)
-from stations import test_station, los_santos_rock_radio, vinewood_boulevard_radio, channel_x, non_stop_pop_fm, west_coast_talk_radio_95_6;
-
 #this is stupid but I couldn't think of another way to call different files in a compact manner
-
+from stations import test_station, los_santos_rock_radio, vinewood_boulevard_radio, channel_x, non_stop_pop_fm, west_coast_talk_radio_95_6, space_103_2, radio_mirror_park;
+import os;
+#TODO: pass through CWD so statin files can have absolute file path
 def route(station_number):
-    if(station_number not in [1,2,4,5,17]): #temp until all stations are in
+    cwd = os.getcwd();
+    
+    if(station_number not in [1,2,4,5,15,16,17]): #temp until all stations are in
         station_number = -1;
     
     if(station_number == -1):
         test_station.run();
+    
     if(station_number == 1):
-        los_santos_rock_radio.run();
-        pass;
+        los_santos_rock_radio.run(cwd);
+
     if(station_number == 2):
-        non_stop_pop_fm.run();
-        pass; 
+        non_stop_pop_fm.run(cwd);
+
     if(station_number == 3):
         pass; 
     if(station_number == 4):
-        channel_x.run();
-        pass; 
+        channel_x.run(cwd);
+
     if(station_number == 5):
-        west_coast_talk_radio_95_6.run();
-        pass; 
+        west_coast_talk_radio_95_6.run(cwd);
+
     if(station_number == 6):
         pass; 
     if(station_number == 7):
@@ -45,12 +44,14 @@ def route(station_number):
     if(station_number == 14):
         pass; 
     if(station_number == 15):
-        pass; 
+        radio_mirror_park.run(cwd);
+
     if(station_number == 16):
-        pass; 
+        space_103_2.run(cwd);
+
     if(station_number == 17):
-        vinewood_boulevard_radio.run();
-        pass; 
+        vinewood_boulevard_radio.run(cwd);
+
     if(station_number == 18):
         pass; 
     if(station_number == 19):

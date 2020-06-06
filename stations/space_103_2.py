@@ -1,11 +1,11 @@
-#vinewood boulevard radio
+#space 103.2
 from playsound import playsound; 
 import random;
 
 def run(cwd):
-    station_dir = cwd + "/audio_files/VINEWOOD BOULEVARD RADIO/";
+    station_dir = cwd + "/audio_files/SPACE 103.2/";
     #master lists
-    song_ml = ['FIRE_DOESNT_BURN_ITSELF.wav', 'DIDDY_WAH_DIDDY.wav', 'COCAINE.wav', 'CALIFORNIA_GIRLS.wav', 'TURN_IT_AROUND.wav', 'CRAWLING_AFTER_YOU.wav', 'NINE_IS_GOD.wav', 'SLEEPWALKER.wav', 'USED_BLOOD.wav', 'THIS_MYSTIC_DECADE.wav', 'BLACK_GREASE.wav', 'THE_DREAM.wav', 'ANSWER_TO_YOURSELF.wav', 'SIXPACK.wav', 'FALL_IN_LINE.wav', 'WET_BLANKET.wav', 'NEXT_STOP.wav', 'WHO_NEEDS_YOU.wav', 'GONE_FOR_GOOD.wav', 'HYSTERIA.wav'];
+    song_ml = ['PARTY_ALL_THE_TIME.wav', 'BACK_AND_FORTH.wav', 'FLASHLIGHT.wav', 'FUNKASIZE_YOU.wav', 'CANT_HOLD_BACK.wav', 'TONIGHT.wav', 'FLASHBACK.wav', 'YOURE_THE_ONE_FOR_ME.wav', 'JOYSTICK.wav', 'HEARTBREAKER.wav', 'HEART_BEAT.wav', 'GOTTA_GET_MY_HANDS_ON_SOME_MONEY.wav', 'CUTIE_PIE.wav', 'ID_RATHER_BE_WITH_YOU.wav', 'DO_IT_ROGER.wav', 'HABOGLABOTRIBIN.wav', 'SKELETONS.wav', 'IM_IN_LOVE.wav', 'WALKING_INTO_SUNSHINE.wav', 'NIGHTS_FEEL_LIKE.wav', 'GIVE_IT_TO_ME_BABY.wav', 'MOTHERSHIP_CONNECTION.wav'];
     mono_solo_ml = [];
     intro_ml = [];
     general_ml = [];
@@ -25,4 +25,4 @@ def run(cwd):
         temp_song_list.pop(num);
     
 if __name__ == "__run__":
-    run(); 
+    run();
