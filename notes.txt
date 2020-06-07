@@ -1,7 +1,16 @@
-main passes user input to station on separate thread (kills old thread)
 
 station:
     has list of if statements controlling flow of audio types i.e. music djspots intros ads news etc.
     
-main thread occasionally polls station_router which polls station to get currently playing
+main thread should occasionally polls station_router which polls station to get currently playing
+    but for now it just reads file as work around
+        but doenst update properly when radio station is killed why?
 
+todo:
+use addnstr(window.getmaxyx()) to cut off text and stop crashes. scrollin text how?
+
+research markov chains and finite state machines for radio logic. rename intro files to match songs
+
+m key to toggle song vs radio vs no ads/news mode   and display mode by now playing
+
+special highlighting for current station separate from highlighted station

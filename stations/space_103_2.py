@@ -2,8 +2,8 @@
 from playsound import playsound; 
 import random;
 
-def run(cwd):
-    station_dir = cwd + "/audio_files/SPACE 103.2/";
+def run():
+    station_dir = "./audio_files/SPACE 103.2/";
     #master lists
     song_ml = ['PARTY_ALL_THE_TIME.wav', 'BACK_AND_FORTH.wav', 'FLASHLIGHT.wav', 'FUNKASIZE_YOU.wav', 'CANT_HOLD_BACK.wav', 'TONIGHT.wav', 'FLASHBACK.wav', 'YOURE_THE_ONE_FOR_ME.wav', 'JOYSTICK.wav', 'HEARTBREAKER.wav', 'HEART_BEAT.wav', 'GOTTA_GET_MY_HANDS_ON_SOME_MONEY.wav', 'CUTIE_PIE.wav', 'ID_RATHER_BE_WITH_YOU.wav', 'DO_IT_ROGER.wav', 'HABOGLABOTRIBIN.wav', 'SKELETONS.wav', 'IM_IN_LOVE.wav', 'WALKING_INTO_SUNSHINE.wav', 'NIGHTS_FEEL_LIKE.wav', 'GIVE_IT_TO_ME_BABY.wav', 'MOTHERSHIP_CONNECTION.wav'];
     mono_solo_ml = [];

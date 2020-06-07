@@ -2,8 +2,8 @@
 from playsound import playsound; 
 import random;
 
-def run(cwd):
-    station_dir = cwd + "/audio_files/VINEWOOD BOULEVARD RADIO/";
+def run():
+    station_dir = "./audio_files/VINEWOOD BOULEVARD RADIO/";
     #master lists
     song_ml = ['FIRE_DOESNT_BURN_ITSELF.wav', 'DIDDY_WAH_DIDDY.wav', 'COCAINE.wav', 'CALIFORNIA_GIRLS.wav', 'TURN_IT_AROUND.wav', 'CRAWLING_AFTER_YOU.wav', 'NINE_IS_GOD.wav', 'SLEEPWALKER.wav', 'USED_BLOOD.wav', 'THIS_MYSTIC_DECADE.wav', 'BLACK_GREASE.wav', 'THE_DREAM.wav', 'ANSWER_TO_YOURSELF.wav', 'SIXPACK.wav', 'FALL_IN_LINE.wav', 'WET_BLANKET.wav', 'NEXT_STOP.wav', 'WHO_NEEDS_YOU.wav', 'GONE_FOR_GOOD.wav', 'HYSTERIA.wav'];
     mono_solo_ml = [];

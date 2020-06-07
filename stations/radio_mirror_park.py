@@ -2,8 +2,8 @@
 from playsound import playsound; 
 import random;
 
-def run(cwd):
-    station_dir = cwd + "/audio_files/RADIO MIRROR PARK/";
+def run():
+    station_dir = "./audio_files/RADIO MIRROR PARK/";
     #master lists
     song_ml = ['DARK_MATTER.wav', 'HEART_IN_THE_PIPES.wav', 'HEARTBREAK.wav', 'NOWHERE_TO_GO.wav', 'WHEN_YOURE_OUT.wav', 'THE_SET_UP.wav', 'TRULY_ALIVE.wav', 'DO_YOU_BELIEVE.wav', 'HOLD_ON_HOLY_GHOST.wav', 'STRANGERS_IN_THE_WIND.wav', 'HIGH_PRESSURE.wav', 'FORGET.wav', 'SLEEPWALKING.wav', 'OLD_LOVE.wav', 'CRYSTALFILM.wav', 'ONE_GIRL_ONE_BOY.wav', 'LITTLE_WHITE_LIE.wav', 'IN_REAL_LIFE.wav', 'PSYCHIC_CITY.wav', 'SHOOTING_HOLES.wav', 'JASMINE.wav', 'SHINE_A_LIGHT.wav', 'SO_MANY_DETAILS.wav', 'MESMERIZED.wav', 'DONT_COME_CLOSE.wav', 'COLOURS.wav', 'POLISH_GIRL.wav', 'FLUTES.wav', 'SOMETIMES.wav', 'NEW_BEAT.wav', 'PHARAOHS.wav', 'CHANGE_OF_COAST.wav', 'FEEL_THE_SAME.wav', 'LIVING_IN_AMERICA.wav', 'LUCKY_BOY.wav', 'THE_DRUMMER.wav', 'BOOGIE_IN_ZERO_GRAVITY.wav', 'ALWAYS.wav', 'O_N_E.wav', 'FROM_NOWHERE.wav'];
     mono_solo_ml = [];

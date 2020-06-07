@@ -2,8 +2,8 @@
 from playsound import playsound; 
 import random;
 
-def run(cwd):
-    station_dir = cwd + "/audio_files/RADIO LOS SANTOS/";
+def run():
+    station_dir = "./audio_files/RADIO LOS SANTOS/";
     #master lists
     song_ml = ['HUNNID_STAX.wav', 'LIFE_OF_A_MACK.wav', 'ALI_BOMAYE.wav', 'HOLD_UP.wav', 'HOW_IT_WAS.wav', 'BASSHEADS.wav', 'UPPER_ECHELON.wav', 'SWIMMING_POOLS.wav', 'SLOW_DOWN.wav', 'DO_IT_BIG.wav', 'IM_A_REAL_ONE.wav', 'R_CALI.wav', 'WORK_YOUNG_SCOOTER.wav', 'MILLIONS.wav', 'SELLIN_DOPE.wav', 'SAY_THAT_THEN.wav', 'WORK_FERG.wav', 'STILL_LIVIN.wav', 'HOOD_GONE_LOVE_IT.wav', 'ILLUMINATE.wav', 'ADHD.wav', 'I_CANT_WAIT_SCOOTER.wav', 'COLLARD_GREENS.wav', 'TOO_HOOD.wav', 'EVERYDAY.wav', 'SMOKIN_AND_RIDIN.wav', 'BUGATTI.wav', 'EASILY.wav', 'RELAXIN.wav', 'BAD_NEWS.wav', 'KUSH_COMA.wav'];
     mono_solo_ml = [];

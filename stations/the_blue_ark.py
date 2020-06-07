@@ -1,12 +1,12 @@
-#channel x
+#the blue ark
 from playsound import playsound; 
 import random;
 
 def run():
-    station_dir =  "./audio_files/CHANNEL X/";
+    station_dir =  "./audio_files/THE BLUE ARK/";
     
     #master lists
-    song_ml = ['PERVERT.wav', 'LIFE_OF_CRIME.wav', 'SILENT_MAJORITY.wav', 'DONT_PUSH_ME_AROUND.wav', 'WHATS_NEXT.wav', 'DONT_NEED_SOCIETY.wav', 'LINDA_BLAIR.wav', 'AMOEBA.wav', 'JOHN_WAYNE.wav', 'THE_ENEMY.wav', 'MY_WAR.wav', 'THE_MOUTH_DONT_STOP.wav', 'BLOWN_AWAY.wav', 'BORED_OF_YOU.wav', 'ROCK_HOUSE.wav', 'LEXICON_DEVIL.wav', 'LOS_ANGELES.wav', 'SUBLIMINAL.wav'];
+    song_ml = ['NIGHT_NURSE.wav', 'CRAZY_GIRL.wav', 'DISCO_DEVIL.wav', 'ODD_RAS.wav', 'ADDI_TRUTH.wav', 'GRUMBLIN_DUB.wav', 'GUN_SHOT_A_FIRE.wav', 'CHAPTER3.wav', 'KINGSTON_BE_WISE.wav', 'NOBODY_MOVE_GET_HURT.wav', 'PSYCHO.wav', 'MONEY_IN_MY_POCKET.wav', 'WE_NEVER_FEAR_DEM.wav', 'ROAST_FISH_AND_CORNBREAD.wav', 'I_AM_A_MADMAN.wav', 'SONS_OF_SLAVES.wav', 'TOPIC_OF_THE_DAY.wav', 'LOYALS.wav', 'MR_MONEY_MAN.wav', 'MONEY_COME_MONEY_GO.wav', 'KINGSTON_TOWN.wav'];
     mono_solo_ml = [];
     intro_ml = [];
     general_ml = [];
@@ -29,3 +29,4 @@ def run():
     
 if __name__ == "__run__":
     run(); 
+ 

@@ -71,23 +71,28 @@ def main(stdscr):
     main_menu_in_focus = True;
     
     #now playing screen
-    now_playing_scr = curses.newwin(1,term_w,term_h-1,0);
+    now_playing_scr = curses.newwin(1,math.floor(3*term_w/4),term_h-1,0);
     f = open("./stations/now_playing.txt","r");
-    now_playing_scr.addstr(f.readline());
+    now_playing_scr.addnstr(f.readline(),now_playing_scr.getmaxyx()[1]);
     f.close();
     now_playing_scr.refresh();
     now_playing_counter = 0;
     
+    #mode screen
+    mode_scr = curses.newwin(1,math.floor(term_w/4),term_h-1,math.floor(3*term_w/4));
+    mode_scr.addnstr("Mode: music_only",mode_scr.getmaxyx()[1]);
+    mode_scr.refresh();
     
     #displays settings menu
     settings_scr = curses.newwin(term_h,term_w,0,0); 
-    settings_scr.addstr("SETTINGS AND INFORMATION\n");
+    settings_scr.addstr("SETTINGS, HELP AND INFORMATION\n"); #will crash if terminal is tiny
     settings_scr.addstr("\"/\" for this menu\n");
     settings_scr.addstr("\"esc\" to quit program\n");
-    settings_scr.addstr("\"i\" and \"k\" navigate stations\n");
+    settings_scr.addstr("\"i\" and \"k\" to navigate stations\n");
     settings_scr.addstr("\"enter\" to select station\n");
     settings_scr.addstr("\"q\" to stop station\n");
-    settings_scr.addstr("Created by yobleck: https:/www.github.com/yobleck\n");
+    settings_scr.addstr("\"m\" to toggle full_radio/music_only/no_ads_news mode\n");
+    settings_scr.addstr("Created by yobleck: https:/www.github.com/yobleck/gtav_radio\n");
     settings_scr.addstr("All artworks are copyright of Rockstar\n");
     settings_scr.addstr("All songs copyright of their respective owners\n");
     settings_scr.addstr("Copyrighted files are not included with this program\n");
@@ -95,7 +100,7 @@ def main(stdscr):
     
     test_scr = curses.newwin(1,math.floor(term_w/2),term_h-2,0);
     test_scr.nodelay(True); #allows loop to run without waiting for input
-    test_scr.addstr(str(logo_scr.getmaxyx()));
+    test_scr.addstr(str(logo_scr.getmaxyx())); #TODO: remove when done testing logo sizes
     
     #main do stuff loop
     while(running):
@@ -131,6 +136,9 @@ def main(stdscr):
         if(x == 113 and "audio_thread" in locals()): 
             is_playing = kill_audio(audio_thread);
             cleanup_now_playing(now_playing_scr);
+            logo_scr.clear(); # get rid of logo
+            logo_scr.box();
+            logo_scr.refresh();
         try: #kill audio_thread after it finishes    move closer to top of loop?
             if(audio_thread.is_alive() == False):
                 is_playing = kill_audio(audio_thread); #murder zombie child to prevent horde
@@ -141,7 +149,7 @@ def main(stdscr):
         
         
         
-        #main menu navigation  TODO: fix qqqqqqqqq issue   something to do with highlighted_station starting at 0 and drawing -1
+        #main menu navigation
         if(x == 107 and main_menu_in_focus): # k key down
             if(highlighted_station < 22): #main_menu_scr.getmaxyx()[0]-4): #keep inbounds TODO: rework this to account for varying heights
                 main_menu_scr.chgat(highlighted_station,1,len(station_list[highlighted_station-1]),curses.A_NORMAL); #un-highlight
@@ -173,13 +181,16 @@ def main(stdscr):
                 main_menu_in_focus = True;
                 
         
+        if(x == 109): # m key for mode toggling currently not enabled
+            pass;
+        
         #read file to get now playing. jank workaround cause I couldn't be bothered to learn multiprocessing.Value
         now_playing_counter += 1;
-        if(now_playing_counter % 1000000 == 0): #massive number to avoid unnecessary file IO
+        if(now_playing_counter % 1000000 == 0 and main_menu_in_focus): #massive number to avoid unnecessary file IO
             now_playing_counter = 0;
             f = open("./stations/now_playing.txt","r");
             now_playing_scr.clear();
-            now_playing_scr.addstr(0,0,f.readline());
+            now_playing_scr.addnstr(0,0,f.readline(),now_playing_scr.getmaxyx()[1]);
             f.close();
             now_playing_scr.refresh();
         
