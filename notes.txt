@@ -14,3 +14,5 @@ research markov chains and finite state machines for radio logic. rename intro f
 m key to toggle song vs radio vs no ads/news mode   and display mode by now playing
 
 special highlighting for current station separate from highlighted station
+
+themes in the settings.ini file

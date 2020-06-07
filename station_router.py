@@ -1,12 +1,12 @@
 #this is stupid but I couldn't think of another way to call different files in a compact manner
 from stations import (test_station, los_santos_rock_radio, vinewood_boulevard_radio, channel_x, non_stop_pop_fm, west_coast_talk_radio_95_6, 
                       space_103_2, radio_mirror_park, radio_los_santos, rebel_radio, soulwax_fm, east_los_fm, west_coast_classics,
-                      blaine_county_talk_radio,the_blue_ark);
+                      blaine_county_talk_radio,the_blue_ark, worldwide_fm, flylo_fm, the_low_down_91_1, self_radio);
 
 #TODO: pass through CWD so statin files can have absolute file path
 def route(station_number):
     
-    if(station_number not in [1,2,3,4,5,6,7,8,9,10,11,15,16,17]): #temp until all stations are in
+    if(station_number not in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,22]): #temp until all stations are in
         station_number = -1;
     
     if(station_number == -1):
@@ -46,11 +46,14 @@ def route(station_number):
         the_blue_ark.run();
         pass; 
     if(station_number == 12):
-        pass; 
+        worldwide_fm.run();
+
     if(station_number == 13):
-        pass; 
+        flylo_fm.run();
+
     if(station_number == 14):
-        pass; 
+        the_low_down_91_1.run();
+
     if(station_number == 15):
         radio_mirror_park.run();
 
@@ -69,7 +72,8 @@ def route(station_number):
     if(station_number == 21):
         pass; 
     if(station_number == 22):
-        pass; 
+        self_radio.run();
+
 
 if __name__ == "__route__":
     route();
