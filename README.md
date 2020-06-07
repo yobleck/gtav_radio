@@ -29,7 +29,7 @@ Backend:
   - type 'pip install playsound' in terminal
   - download gstreamer if on linux
   - files to be downloaded from 3rd party and placed in audio_files folder where gtav_radio.py is located
-    audio files not included here for legal reasons
+    - audio files not included here for legal reasons
     
  ## Controls
   - "esc" to quit program
