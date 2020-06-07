@@ -100,7 +100,7 @@ def main(stdscr):
     
     test_scr = curses.newwin(1,math.floor(term_w/2),term_h-2,0);
     test_scr.nodelay(True); #allows loop to run without waiting for input
-    test_scr.addstr(str(logo_scr.getmaxyx())); #TODO: remove when done testing logo sizes
+    test_scr.addstr("/ for help"); #TODO: remove when done testing logo sizes
     
     #main do stuff loop
     while(running):
@@ -177,6 +177,10 @@ def main(stdscr):
                 main_menu_scr.refresh();
                 test_scr.redrawwin();
                 test_scr.refresh();
+                now_playing_scr.redrawwin();
+                now_playing_scr.refresh();
+                mode_scr.redrawwin();
+                mode_scr.refresh();
                 settings_visible = False;
                 main_menu_in_focus = True;
                 

@@ -16,3 +16,7 @@ m key to toggle song vs radio vs no ads/news mode   and display mode by now play
 special highlighting for current station separate from highlighted station
 
 themes in the settings.ini file
+
+convert wav to mp3 then package up on mega
+
+windows version
