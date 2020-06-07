@@ -32,6 +32,12 @@ def draw_logo(input_station_list, input_window): #TODO: use getmaxyx to automati
     for y in range(0, len(logo_file)):
         input_window.addstr(y+1,1,logo_file[y][:-2]);
     input_window.refresh();
+    
+def cleanup_now_playing(input_window):
+    f = open("./stations/now_playing.txt","w"); #resets now playing file when program closes
+    f.write("Now Playing: Welcome to GTA V Radio");
+    f.close();
+    input_window.refresh();
 
 
 #main function obviously
@@ -124,10 +130,12 @@ def main(stdscr):
         #kill audio with "q"
         if(x == 113 and "audio_thread" in locals()): 
             is_playing = kill_audio(audio_thread);
+            cleanup_now_playing(now_playing_scr);
         try: #kill audio_thread after it finishes    move closer to top of loop?
             if(audio_thread.is_alive() == False):
                 is_playing = kill_audio(audio_thread); #murder zombie child to prevent horde
                 current_station = None;
+                cleanup_now_playing(now_playing_scr);
         except:
             pass;
         
@@ -176,9 +184,8 @@ def main(stdscr):
             now_playing_scr.refresh();
         
 #####end while loop
-    f = open("./stations/now_playing.txt","w"); #resets now playing file when program closes
-    f.write("Now Playing: Welcome to GTA V Radio");
-    f.close();
+    cleanup_now_playing(now_playing_scr);
+
 
 #run! returns terminal to sane state if program crashes
 curses.wrapper(main); 
