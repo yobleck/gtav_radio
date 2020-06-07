@@ -28,3 +28,11 @@ Backend:
   - pip install playsound
   - files to be extracted from GTA V rpfs with openiv and placed in audio_files folder.
     not included here for legal reasons
+    
+ ## Controls
+  - "esc" to quit program
+  - "q" to stop station
+  - "i" and "k" to navigate stations
+  - "enter" to play station
+  - "/" help menu
+  - "m" mode switch (WIP)
