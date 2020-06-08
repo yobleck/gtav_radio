@@ -4,12 +4,14 @@ GTA V radio stand alone program
 ## WIP
 
 Frontend:
-python ncurses 
+  - python 
+    - ncurses (linux)
+    - window-curses or unicurses for windows
 
 Backend:
-- [playsound](https://github.com/TaylorSMarks/playsound)
-  - linux:[gstreamer](https://gstreamer.freedesktop.org/documentation/installing/on-linux.html?gi-language=c)
-  - win:windll.winmm
+  - [playsound](https://github.com/TaylorSMarks/playsound)
+    - linux:[gstreamer](https://gstreamer.freedesktop.org/documentation/installing/on-linux.html?gi-language=c)
+    - win:windll.winmm
 
 ## OS Versions:
   ### Functioning:
@@ -31,6 +33,7 @@ Backend:
   - files to be downloaded from 3rd party and placed in audio_files folder where gtav_radio.py is located
     - audio files not included here for legal reasons
     - aHR0cHM6Ly9tZWdhLm56L2ZpbGUvbkZkV2lBREwjd1lJcm4zSXloMEh6MTZUemNsNzVmd0EyT053NHVOMXZSVDh2c042dUxuOA==
+  - (standalone version with no dependencies to come)
     
  ## Controls
   - "esc" to quit program
