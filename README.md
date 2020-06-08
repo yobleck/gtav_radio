@@ -7,9 +7,9 @@ Frontend:
 python ncurses 
 
 Backend:
-[playsound](https://github.com/TaylorSMarks/playsound)
-  linux:[gstreamer](https://gstreamer.freedesktop.org/documentation/installing/on-linux.html?gi-language=c)
-  win:windll.winmm
+- [playsound](https://github.com/TaylorSMarks/playsound)
+  - linux:[gstreamer](https://gstreamer.freedesktop.org/documentation/installing/on-linux.html?gi-language=c)
+  - win:windll.winmm
 
 ## OS Versions:
   ### Functioning:
