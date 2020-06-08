@@ -17,11 +17,12 @@ Backend:
 
 ## OS Versions:
   ### Functioning:
-    early linux beta
+    - early linux beta
+    - early windows beta
   ### WIP:
     linux more features
-  ### Coming:
     Windows 7 (which will hopefully work with 8-10 as well)
+  ### Coming:
     Android through termux app?
   ### Probably not happening:
     MacOS, iOS
@@ -31,6 +32,7 @@ Backend:
   - Download from here
   - make sure python 3.8 or later is installed
   - type 'pip install playsound' in terminal
+  - if on windows type 'pip install windows-curses' in terminal
   - download gstreamer if on linux
   - files to be downloaded from 3rd party and placed in audio_files folder where gtav_radio.py is located
     - audio files not included here for legal reasons
