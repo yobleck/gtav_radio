@@ -1,18 +1,18 @@
 #west coast classics
 from playsound import playsound; 
-import random;
+import random, os;
 
 def run():
     station_dir =  "./audio_files/WEST COAST CLASSICS/";
     
     #master lists
-    song_ml = ['WE_ROLL_DEEP.wav', 'FIRST_OF_THE_MONTH.wav', 'BOW_DOWN.wav', 'SERVIN_EM_HEAT.wav', 'WHAT_YOU_WANNA_DO.wav', 'THE_NEXT_EPISODE.wav', 'STILL_D_R_E.wav', 'NOTHIN_BUT_THE_CAVI_HIT.wav', 'AFRO_PUFFS.wav', 'AMBITIONZ_AZ_A_RIDAH.wav', 'C_WALK.wav', 'BALLAD_OF_A_MENACE.wav', 'THE_MURDA_SHOW.wav', 'APPETITE_FOR_DESTRUCTION.wav', 'STRAIGHT_UP_MENACE.wav', 'THIS_DJ.wav', 'WHAT_WOULD_YOU_DO.wav', 'LIKE_A_PIANO.wav', 'CAPTAIN_SAVE_A_HOE.wav', 'LATE_NIGHT_HYPE.wav', 'SHERM_STICK.wav', 'DOLLAZ_AND_SENSE.wav', 'NO_MORE_QUESTIONS.wav', 'YOU_KNOW_HOW_WE_DO.wav', 'MIND_PLAYING_TRICKS.wav', 'I_GOT_FIVE_ON_IT.wav', 'GANGSTA_GANGSTA.wav', 'GIN_AND_JUICE.wav', 'SO_YOU_WANT_TO_BE_A_GANGSTER.wav'];
-    mono_solo_ml = [];
-    intro_ml = [];
-    general_ml = [];
-    station_id = [];
-    time_ml = [];
-    to_ml = [];
+    song_ml = os.listdir(station_dir + "songs/"); #['WE_ROLL_DEEP.wav', 'FIRST_OF_THE_MONTH.wav', 'BOW_DOWN.wav', 'SERVIN_EM_HEAT.wav', 'WHAT_YOU_WANNA_DO.wav', 'THE_NEXT_EPISODE.wav', 'STILL_D_R_E.wav', 'NOTHIN_BUT_THE_CAVI_HIT.wav', 'AFRO_PUFFS.wav', 'AMBITIONZ_AZ_A_RIDAH.wav', 'C_WALK.wav', 'BALLAD_OF_A_MENACE.wav', 'THE_MURDA_SHOW.wav', 'APPETITE_FOR_DESTRUCTION.wav', 'STRAIGHT_UP_MENACE.wav', 'THIS_DJ.wav', 'WHAT_WOULD_YOU_DO.wav', 'LIKE_A_PIANO.wav', 'CAPTAIN_SAVE_A_HOE.wav', 'LATE_NIGHT_HYPE.wav', 'SHERM_STICK.wav', 'DOLLAZ_AND_SENSE.wav', 'NO_MORE_QUESTIONS.wav', 'YOU_KNOW_HOW_WE_DO.wav', 'MIND_PLAYING_TRICKS.wav', 'I_GOT_FIVE_ON_IT.wav', 'GANGSTA_GANGSTA.wav', 'GIN_AND_JUICE.wav', 'SO_YOU_WANT_TO_BE_A_GANGSTER.wav'];
+    mono_solo_ml = os.listdir(station_dir + "mono_solo/");
+    intro_ml = os.listdir(station_dir + "intro/");
+    general_ml = os.listdir(station_dir + "general/");
+    id_ml = os.listdir(station_dir + "id/");
+    time_ml = os.listdir(station_dir + "time/");
+    to_ml = os.listdir(station_dir + "to/");
     ad_ml = [];
     news_ml = [];
     

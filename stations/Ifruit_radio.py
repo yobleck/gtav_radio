@@ -1,18 +1,16 @@
 #Ifruit radio
 from playsound import playsound; 
-import random;
+import random, os;
 
 def run():
     station_dir =  "./audio_files/iFRUIT RADIO/";
     
     #master lists
-    song_ml = ['BACK_TO_BASICS_FLOATING_POINTS_REMIX.wav', 'PATTERN_CHANEL.wav', 'ACT_UP.wav', 'KNOCK_YOUR_BLOCK_OFF.wav', 'WINGS.wav', 'MONEY_IN_THE_BANK.wav', 'ALIENS.wav', 'KILLIN_DEM.wav', 'BOP.wav', 'HUNDRED_K_ON_A_COUPE.wav', 'NUMB_NUMB_JUICE.wav', 'TBD.wav', 'WITH_THE_THING.wav', 'DANCE_IN_THE_WATER.wav', 'OPOTOYI.wav', 'GREAZE_MODE.wav', 'I_NEED.wav', 'HIGHEST_IN_THE_ROOM.wav', 'HOT_REMIX.wav', 'POP_STAR.wav', 'KISS_AND_TELL.wav', 'ORIGINAL_FORMAT.wav', 'W.wav', 'CASH_SHIT.wav', 'CRIME_PAYS.wav', 'EVERYTHING_SHE_WANTS.wav', 'KITCHEN_KINGS.wav', 'MUST_BE.wav'];
-    mono_solo_ml = [];
-    intro_ml = [];
-    general_ml = [];
-    station_id = [];
-    time_ml = [];
-    to_ml = [];
+    song_ml = os.listdir(station_dir + "songs/"); #['BACK_TO_BASICS_FLOATING_POINTS_REMIX.wav', 'PATTERN_CHANEL.wav', 'ACT_UP.wav', 'KNOCK_YOUR_BLOCK_OFF.wav', 'WINGS.wav', 'MONEY_IN_THE_BANK.wav', 'ALIENS.wav', 'KILLIN_DEM.wav', 'BOP.wav', 'HUNDRED_K_ON_A_COUPE.wav', 'NUMB_NUMB_JUICE.wav', 'TBD.wav', 'WITH_THE_THING.wav', 'DANCE_IN_THE_WATER.wav', 'OPOTOYI.wav', 'GREAZE_MODE.wav', 'I_NEED.wav', 'HIGHEST_IN_THE_ROOM.wav', 'HOT_REMIX.wav', 'POP_STAR.wav', 'KISS_AND_TELL.wav', 'ORIGINAL_FORMAT.wav', 'W.wav', 'CASH_SHIT.wav', 'CRIME_PAYS.wav', 'EVERYTHING_SHE_WANTS.wav', 'KITCHEN_KINGS.wav', 'MUST_BE.wav'];
+    mono_solo_ml = os.listdir(station_dir + "mono_solo/");
+    intro_ml = os.listdir(station_dir + "intro/");
+    id_ml = os.listdir(station_dir + "id/");
+    time_ml = os.listdir(station_dir + "time/");
     ad_ml = [];
     news_ml = [];
     

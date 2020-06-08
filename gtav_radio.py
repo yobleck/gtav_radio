@@ -119,16 +119,18 @@ def main(stdscr):
             is_playing = True;
             
         if(x == 10 and current_station != highlighted_station and main_menu_in_focus): #enter key to start playing station
-            #kill current thread
-            if("audio_thread" in locals()):
+            if("audio_thread" in locals()): #kill current thread
                 kill_audio(audio_thread);
-            #get highlight number and set current station
-            current_station = highlighted_station;
+                if(isinstance(current_station,int)):
+                    main_menu_scr.addstr(current_station,len(station_list[current_station-1])+2,"   "); #remove current station arrow
+            current_station = highlighted_station; #get highlight number and set current station
             #call play to specific station
             audio_thread = create_thread(current_station); #TODO:replace with current_station once station code is ready
             audio_thread.start();
             is_playing = True;
             draw_logo(station_list[current_station-1], logo_scr);
+            main_menu_scr.addstr(current_station,len(station_list[current_station-1])+2,"<--"); #points at current station when highlight moves
+            main_menu_scr.refresh();
             test_scr.addstr("s" + str(current_station));
             
         
@@ -139,6 +141,8 @@ def main(stdscr):
             logo_scr.clear(); # get rid of logo
             logo_scr.box();
             logo_scr.refresh();
+            main_menu_scr.addstr(current_station,len(station_list[current_station-1])+2,"   ");
+            main_menu_scr.refresh();
         try: #kill audio_thread after it finishes    move closer to top of loop?
             if(audio_thread.is_alive() == False):
                 is_playing = kill_audio(audio_thread); #murder zombie child to prevent horde
@@ -150,13 +154,13 @@ def main(stdscr):
         
         
         #main menu navigation
-        if(x == 107 and main_menu_in_focus): # k key down
+        if(x in [107,115] and main_menu_in_focus): # k key down
             if(highlighted_station < 22): #main_menu_scr.getmaxyx()[0]-4): #keep inbounds TODO: rework this to account for varying heights
                 main_menu_scr.chgat(highlighted_station,1,len(station_list[highlighted_station-1]),curses.A_NORMAL); #un-highlight
                 highlighted_station += 1;
                 main_menu_scr.chgat(highlighted_station,1,len(station_list[highlighted_station-1]),curses.A_REVERSE); #highlight
                 main_menu_scr.refresh();
-        if(x == 105 and main_menu_in_focus): # i key up
+        if(x in [105,119] and main_menu_in_focus): # i key up
             if(highlighted_station > 1):
                 main_menu_scr.chgat(highlighted_station,1,len(station_list[highlighted_station-1]),curses.A_NORMAL);
                 highlighted_station -= 1;
@@ -164,7 +168,7 @@ def main(stdscr):
                 main_menu_scr.refresh();
                 
         
-        if(x == 47): # /? key for settings. actual editing or just for show?
+        if(x in [47,63]): # /? key for settings. actual editing or just for show?
             if(settings_visible == False):
                 settings_scr.redrawwin();
                 settings_scr.refresh();

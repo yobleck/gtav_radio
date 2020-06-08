@@ -1,18 +1,18 @@
 #the blue ark
 from playsound import playsound; 
-import random;
+import random, os;
 
 def run():
     station_dir =  "./audio_files/THE BLUE ARK/";
     
     #master lists
-    song_ml = ['NIGHT_NURSE.wav', 'CRAZY_GIRL.wav', 'DISCO_DEVIL.wav', 'ODD_RAS.wav', 'ADDI_TRUTH.wav', 'GRUMBLIN_DUB.wav', 'GUN_SHOT_A_FIRE.wav', 'CHAPTER3.wav', 'KINGSTON_BE_WISE.wav', 'NOBODY_MOVE_GET_HURT.wav', 'PSYCHO.wav', 'MONEY_IN_MY_POCKET.wav', 'WE_NEVER_FEAR_DEM.wav', 'ROAST_FISH_AND_CORNBREAD.wav', 'I_AM_A_MADMAN.wav', 'SONS_OF_SLAVES.wav', 'TOPIC_OF_THE_DAY.wav', 'LOYALS.wav', 'MR_MONEY_MAN.wav', 'MONEY_COME_MONEY_GO.wav', 'KINGSTON_TOWN.wav'];
-    mono_solo_ml = [];
-    intro_ml = [];
-    general_ml = [];
-    station_id = [];
-    time_ml = [];
-    to_ml = [];
+    song_ml = os.listdir(station_dir + "songs/"); #['NIGHT_NURSE.wav', 'CRAZY_GIRL.wav', 'DISCO_DEVIL.wav', 'ODD_RAS.wav', 'ADDI_TRUTH.wav', 'GRUMBLIN_DUB.wav', 'GUN_SHOT_A_FIRE.wav', 'CHAPTER3.wav', 'KINGSTON_BE_WISE.wav', 'NOBODY_MOVE_GET_HURT.wav', 'PSYCHO.wav', 'MONEY_IN_MY_POCKET.wav', 'WE_NEVER_FEAR_DEM.wav', 'ROAST_FISH_AND_CORNBREAD.wav', 'I_AM_A_MADMAN.wav', 'SONS_OF_SLAVES.wav', 'TOPIC_OF_THE_DAY.wav', 'LOYALS.wav', 'MR_MONEY_MAN.wav', 'MONEY_COME_MONEY_GO.wav', 'KINGSTON_TOWN.wav'];
+    mono_solo_ml = os.listdir(station_dir + "mono_solo/");
+    intro_ml = os.listdir(station_dir + "intro/");
+    general_ml = os.listdir(station_dir + "general/");
+    id_ml = os.listdir(station_dir + "id/");
+    time_ml = os.listdir(station_dir + "time/");
+    to_ml = os.listdir(station_dir + "to/");
     ad_ml = [];
     news_ml = [];
     

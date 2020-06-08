@@ -1,12 +1,12 @@
 #west coast talk radio 95.6
 from playsound import playsound; 
-import random;
+import random, os;
 
 def run():
     station_dir = "./audio_files/WEST COAST TALK RADIO 95.6/";
     #master lists
-    mono_solo_ml = ['MONO_CHATTERSPHERE.wav', 'MONO_FERNANDO_SHOW_1.wav', 'MONO_DCHAKRA_ATTACK_PART_2.wav', 'MONO_CHAKRA_ATTACK_PART_1.wav'];
-    intro_ml = ['ID_09.wav', 'ID_06.wav', 'ID_10.wav', 'ID_02.wav', 'ID_04.wav', 'ID_01.wav', 'ID_05.wav', 'ID_11.wav', 'ID_08.wav', 'ID_03.wav', 'ID_07.wav'];
+    mono_solo_ml = os.listdir(station_dir + "mono_solo/"); #['MONO_CHATTERSPHERE.wav', 'MONO_FERNANDO_SHOW_1.wav', 'MONO_DCHAKRA_ATTACK_PART_2.wav', 'MONO_CHAKRA_ATTACK_PART_1.wav'];
+    id_ml = os.listdir(station_dir + "id/"); #['ID_09.wav', 'ID_06.wav', 'ID_10.wav', 'ID_02.wav', 'ID_04.wav', 'ID_01.wav', 'ID_05.wav', 'ID_11.wav', 'ID_08.wav', 'ID_03.wav', 'ID_07.wav'];
     
     temp_song_list = mono_solo_ml;
     while(temp_song_list):

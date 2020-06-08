@@ -1,17 +1,17 @@
 #vinewood boulevard radio
 from playsound import playsound; 
-import random;
+import random, os;
 
 def run():
     station_dir = "./audio_files/VINEWOOD BOULEVARD RADIO/";
     #master lists
-    song_ml = ['FIRE_DOESNT_BURN_ITSELF.wav', 'DIDDY_WAH_DIDDY.wav', 'COCAINE.wav', 'CALIFORNIA_GIRLS.wav', 'TURN_IT_AROUND.wav', 'CRAWLING_AFTER_YOU.wav', 'NINE_IS_GOD.wav', 'SLEEPWALKER.wav', 'USED_BLOOD.wav', 'THIS_MYSTIC_DECADE.wav', 'BLACK_GREASE.wav', 'THE_DREAM.wav', 'ANSWER_TO_YOURSELF.wav', 'SIXPACK.wav', 'FALL_IN_LINE.wav', 'WET_BLANKET.wav', 'NEXT_STOP.wav', 'WHO_NEEDS_YOU.wav', 'GONE_FOR_GOOD.wav', 'HYSTERIA.wav'];
-    mono_solo_ml = [];
-    intro_ml = [];
-    general_ml = [];
-    station_id = [];
-    time_ml = [];
-    to_ml = [];
+    song_ml = os.listdir(station_dir + "songs/"); #['FIRE_DOESNT_BURN_ITSELF.wav', 'DIDDY_WAH_DIDDY.wav', 'COCAINE.wav', 'CALIFORNIA_GIRLS.wav', 'TURN_IT_AROUND.wav', 'CRAWLING_AFTER_YOU.wav', 'NINE_IS_GOD.wav', 'SLEEPWALKER.wav', 'USED_BLOOD.wav', 'THIS_MYSTIC_DECADE.wav', 'BLACK_GREASE.wav', 'THE_DREAM.wav', 'ANSWER_TO_YOURSELF.wav', 'SIXPACK.wav', 'FALL_IN_LINE.wav', 'WET_BLANKET.wav', 'NEXT_STOP.wav', 'WHO_NEEDS_YOU.wav', 'GONE_FOR_GOOD.wav', 'HYSTERIA.wav'];
+    mono_solo_ml = os.listdir(station_dir + "mono_solo/");
+    intro_ml = os.listdir(station_dir + "intro/");
+    general_ml = os.listdir(station_dir + "general/");
+    id_ml = os.listdir(station_dir + "id/");
+    time_ml = os.listdir(station_dir + "time/");
+    to_ml = os.listdir(station_dir + "to/");
     ad_ml = [];
     news_ml = [];
     

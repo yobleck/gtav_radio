@@ -1,12 +1,12 @@
 #blonded los santos 97.8 fm
 from playsound import playsound; 
-import random;
+import random, os;
 
 def run():
     station_dir =  "./audio_files/BLONDED LOS SANTOS 97.8 FM/";
     
     #master lists
-    song_ml = ['RADIO_XM17_P3.wav', 'RADIO_XM17_P1.wav', 'RADIO_XM17_P2.wav'];
+    song_ml = os.listdir(station_dir + "songs/"); #['RADIO_XM17_P3.wav', 'RADIO_XM17_P1.wav', 'RADIO_XM17_P2.wav'];
     
     temp_song_list = song_ml;
     while(temp_song_list):

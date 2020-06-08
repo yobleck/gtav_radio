@@ -7,12 +7,12 @@ def run():
     
     #master lists
     song_ml = os.listdir(station_dir + "songs/");
-    mono_solo_ml = [];
-    intro_ml = [];
-    general_ml = [];
-    station_id = [];
-    time_ml = [];
-    to_ml = [];
+    mono_solo_ml = os.listdir(station_dir + "solo/");
+    intro_ml = os.listdir(station_dir + "intro/");
+    outro_ml = os.listdir(station_dir + "outro/");
+    id_ml = os.listdir(station_dir + "id/");
+    time_ml = os.listdir(station_dir + "time/");
+    to_ml = os.listdir(station_dir + "to/");
     ad_ml = [];
     news_ml = [];
     

@@ -1,12 +1,12 @@
 #blaine county talk radio
 from playsound import playsound; 
-import random;
+import random, os;
 
 def run():
     station_dir = "./audio_files/BLAINE COUNTY TALK RADIO/";
     #master lists
-    mono_solo_ml = ['MONO_BLESS_YOUR_HEART.wav', 'MONO_ZBEYOND_INSEMINATION_PART_2.wav', 'MONO_BCR_COMMUNITY_HOUR.wav', 'MONO_BEYOND_INSEMINATION.wav'];
-    intro_ml = ['ID_09.wav', 'ID_06.wav', 'ID_10.wav', 'ID_02.wav', 'ID_04.wav', 'ID_01.wav', 'ID_05.wav', 'ID_11.wav', 'ID_08.wav', 'ID_03.wav', 'ID_07.wav'];
+    mono_solo_ml = os.listdir(station_dir + "mono_solo/"); #['MONO_BLESS_YOUR_HEART.wav', 'MONO_ZBEYOND_INSEMINATION_PART_2.wav', 'MONO_BCR_COMMUNITY_HOUR.wav', 'MONO_BEYOND_INSEMINATION.wav'];
+    id_ml = os.listdir(station_dir + "id/"); #['ID_09.wav', 'ID_06.wav', 'ID_10.wav', 'ID_02.wav', 'ID_04.wav', 'ID_01.wav', 'ID_05.wav', 'ID_11.wav', 'ID_08.wav', 'ID_03.wav', 'ID_07.wav'];
     
     temp_song_list = mono_solo_ml;
     while(temp_song_list):

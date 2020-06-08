@@ -1,18 +1,18 @@
  #the low down 91.1
 from playsound import playsound; 
-import random;
+import random, os;
 
 def run():
     station_dir =  "./audio_files/THE LOW DOWN 91.1/";
     
     #master lists
-    song_ml = ['CLIMAX.wav', 'BOUNCY_LADY.wav', 'O_O_H_CHILD.wav', 'I_BELIEVE_IN_MIRACLES.wav', 'MAGIC_MOUNTAIN.wav', 'SMILING_FACES.wav', 'FUNNY_FEELING.wav', 'READY_OR_NOT.wav', 'CHANGIN.wav', 'CRUISIN.wav', 'CALIFORNIA_SOUL.wav', 'VIVA_TIRADO.wav', 'ASHLEYS_ROACHCLIP.wav', 'DO_IT_TIL_YOURE_SATISFIED.wav', 'SUPERMAN_LOVER.wav', 'STORIES.wav', 'I_GET_LIFTED.wav', 'THE_CISCO_KID.wav', 'HERCULES.wav', 'RUBBER_BAND.wav'];
-    mono_solo_ml = [];
-    intro_ml = [];
-    general_ml = [];
-    station_id = [];
-    time_ml = [];
-    to_ml = [];
+    song_ml = os.listdir(station_dir + "songs/"); #['CLIMAX.wav', 'BOUNCY_LADY.wav', 'O_O_H_CHILD.wav', 'I_BELIEVE_IN_MIRACLES.wav', 'MAGIC_MOUNTAIN.wav', 'SMILING_FACES.wav', 'FUNNY_FEELING.wav', 'READY_OR_NOT.wav', 'CHANGIN.wav', 'CRUISIN.wav', 'CALIFORNIA_SOUL.wav', 'VIVA_TIRADO.wav', 'ASHLEYS_ROACHCLIP.wav', 'DO_IT_TIL_YOURE_SATISFIED.wav', 'SUPERMAN_LOVER.wav', 'STORIES.wav', 'I_GET_LIFTED.wav', 'THE_CISCO_KID.wav', 'HERCULES.wav', 'RUBBER_BAND.wav'];
+    mono_solo_ml = os.listdir(station_dir + "mono_solo/");
+    intro_ml = os.listdir(station_dir + "intro/");
+    general_ml = os.listdir(station_dir + "general/");
+    id_ml = os.listdir(station_dir + "id/");
+    time_ml = os.listdir(station_dir + "time/");
+    to_ml = os.listdir(station_dir + "to/");
     ad_ml = [];
     news_ml = [];
     
