@@ -1,2 +1,2 @@
 *.3 linguist-language=text
-
+*.* linguist-language=python
