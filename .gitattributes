@@ -1,3 +1,3 @@
 * linguist-language=text
-*.py linguist-language=python
-*.sh linguist-language=shell
+*.py linguist-language=Python
+*.sh linguist-language=Shell
