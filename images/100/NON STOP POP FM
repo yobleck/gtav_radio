@@ -1,50 +1,100 @@
-                                     !???????!                                                      
-                                 ?????@@???????????                                                 
-                              ?????@@@@@@@??????????????                                            
-                          :????P@@@@@@@G??@@@@@@????????????:                          @@@@@@@@  @@@
-                       !????G@@@@@@@@P?G@@@@@???G@@@@????????????:                     @@   @@@  @@@
-                    ?????@@@@@@@@@@??@@@@@P?@@@@@@@@@@P???????????????                 @@   @@@  @@@
-                :????P@@@@@G@@@@@?@@@@@G?@@@@G????@@@@????@@@P????????????:            @@   @G@P @@@
-             !????G@@@@@P?@@@@GG@@@@@?G@@@@?????G@@@???G@@@@@@G???????????????:       G@@@@@@G@@G@@@
-          ?????@@@@@@G??@@@@G@@@@@??@@@@P?????@@@@G??@@@@@@@@??????@@@G?????????      G@@   @G@@G@@@
-       ?????G@@@@@@???@@@@@@@@@G??@@@@??????@@@@G?P@@@@@@@@?????G@@@@@@@??????        G@@   @GP@@@@@
-    !??????@@@@@????@@@@@@@@@???@@@@?????G@@@@??@@@@@@@@@G???P@@@@@@@!?????           G@@   @@!@@@@@
-    :?????????????@@@@@@@@????@@@@?????@@@@@??@@@@@@@@@@???@@@@@@@!?????:       :PP   G@@   @@ @@?@@
-        ??????????@@@@@P????P@@@????@@@@@G?G@@@@@G@@@@??G@@@@@@@??????        PPPPP    @@   @@ @@   
- P         !???????????????G@@@??@@@@@@??@@@@@@?@@@@P?@@@@@@@??????        PPPPPPPP                 
- PPPP!         ????????????@@@@@@@@@G?P@@@@@@?G@@@@@@@@@@@!?????        PPPPPPPPPPPP                
- PPPPPPPP         :??????????@@@G???@@@@@@G??@@@@@@@@@@??????:       ?PPPPPPPPPPPPPP                
-:PPPPPPPPPPP!         ????????????@@@@@@P??@@@@@@@@@P?????!       PPPPPPPPPPPGPPPPPP                
-!PPPPPPPPPPPPPPP!        !??????????@@???P@@@@@@@P?????!       !PPPPPPPPG@@@@@@@PPPP                
-PPPPPPPPPPPPPPPPPPP?         ???????????@@@@@@P??????:      :PPPPPPPPPP@@@@@@@@@@PPP                
-PPPPP@@@@PPPPPPPPPPPPPP         :?????????? ??????!       PPPPPPPPPPPPP@@@@PPP@@@PPP                
-PPP@@@@@@@PPPPPPPPPPPPPPPPP         ???????????!       PPPPPPPPPPPPPPPP@@@@PPP@@@GPP                
-PPP@@@G@@@@P@@@@PPPPPPPPPPPPPP!        :?????       ?PPPPPPPPP@@@@@@PPP@@@@PPPG@@GPP                
-PPG@@GPP@@@G@@@@@@@GPPPPPPPPPPPPPP:              ?PPPPPPPPPPP@@@@@@@@PP@@@@PPPP@@@PP                
-PPG@@@PP@@@PP@@@@@@@PPPPPPPPPPPPPPPPPP         PPPPPPPPPPPPPG@@@PP@@@GP@@@@PPPP@@GPP:               
-PPP@@@@P@@PPP@@@GG@PG@@@@@PPPPPPPPPPPPPP     PPPPPPG@@@@@PPP@@@@PPG@@@PG@@@GPPG@@PPP:               
-PPP@@@@PPPPPP@@@GPPG@@@@@@@PPPPPPPPPPPPP     PPPP@@@@@@@@@PP@@@GPPP@@@PG@@@GP@@@@PPP:               
-PPPP@@@@PPPPP@@@PPP@@@PP@@@GP@@@@@PPPPPP     PPPP@@@@GG@@@PP@@@PPPP@@@PP@@@@@@@@PPPP:               
-PPPPP@@@@PPPP@@@PPG@@@PP@@@GP@@@@@@@PPPP     PPPP@@@PPPG@@@P@@@PPPP@@@GP@@@@@@GPPPPP:               
-PPPPP@@@@PPPP@@@PP@@@PPP@@@GG@@@G@@@@PPP     PPPP@@@PPPP@@@G@@@PPPP@@@GP@@@@PPPPPPPP:               
-PPPPPP@@@@PPP@@@PP@@@PPP@@@G@@@@PP@@@PPP     PPPG@@@PPPP@@@G@@@PPPP@@@GP@@@@PPPPPPPP:               
-PPPPPPP@@@GPG@@@PP@@@PPP@@@P@@@GPP@@@GPP     PPPG@@@PPPP@@@G@@@PPPPG@@@P@@@@PPPPPPPP:               
-PPG@GPPG@@@PG@@@PG@@@PPP@@@P@@@PPPG@@GPP     PPPG@@@PPPP@@@G@@@PPPPG@@@P@@@@PPPPPPPP:               
-PP@@@@PP@@@@G@@@PG@@GPPP@@@P@@@PPP@@@GPP     PPPG@@@GPPG@@GG@@@PPPPG@@GP@@@@PPPPPPPP:               
-PP@@@@PP@@@@G@@@P@@@PPPP@@@P@@@PPP@@@PPP     PPPG@@@GP@@@@PG@@@PPPPG@@GPG@@@PPPPPPPP:               
-PP@@@GPG@@@G@@@@P@@@PPPP@@PG@@@@@@@@PPPP     PPPG@@@@@@@@PPP@@@GPPPG@@PPG@@@GPPPPPPP:               
-PPP@@@@@@@@P@@@@P@@@PPP@@@PG@@@@@@@PPPPP     PPPG@@@@@@GPPPP@@@@PPP@@@PPP@@@GPPPPPPP:               
-PPPP@@@@@@PP@@@@P@@@PPP@@@P@@@@PPPPPPPPP    ?PPP@@@@@PPPPPPP@@@@PP@@@GPPP@@PPPPPPPP:                
-PPPPPPPPPPPP@@@GP@@@PPP@@GP@@@@PPPPPPPPP    ?PPP@@@@@PPPPPPPP@@@@@@@@PPPPPPPPPPPP                   
-  PPPPPPPPPPG@@GPG@@@P@@@PP@@@@PPPPPPPPP    ?PPP@@@@@PPPPPPPPG@@@@@PPPPPPPPPPP                      
-    PPPPPPPPPPPPPP@@@@@@GPP@@@@PPPPPPPPP    ?PPP@@@@@PPPPPPPPPPPGPPPPPPPPPP:                        
-      PPPPPPPPPPPPP@@@@@PPP@@@@PPPPPPPPP    ?PPP@@@@@PPPPPPPPPPPPPPPPPPP!                           
-         PPPPPPPPPPPPPPPPPP@@@@PPPPPPPPP    ?PPP@@@@@PPPPPPPPPPPPPPPPP                              
-            ?PPPPPPPPPPPPPP@@@@PPPPPPPPP    ?PPP@@@@@PPPPPPPPPPPPPP                                 
-               PPPPPPPPPPPPPG@@PPPPPPPPP    ?PPPG@@@@PPPPPPPPPPP                                    
-                  PPPPPPPPPPPPPPPPPPPPPP    ?PPPG@GPPPPPPPPPP                                       
-                      PPPPPPPPPPPPPPPPPP    ?PPPPPPPPPPPPP?                                         
-                         PPPPPPPPPPPPPPP    ?PPPPPPPPPP!                                            
-                            :PPPPPPPPPPP    ?PPPPPPP!                                               
-                                PPPPPPPP    ?PPPPP                                                  
-                                    !PP:    ?P?                                                     
+                                                                            !?????????????                                                                                                               
+                                                                        :??????????????????????:                                                                                                         
+                                                                    :??????????????????????????????::                                                                                                    
+                                                                 :!????????P@@@@@G??????????????????????!:                                                                                               
+                                                              !????????PG@@@@@@@@@@@P????????????????????????!:                                                                                          
+                                                          :!????????P@@@@@@@@@@@@@@P????G@GGG????????????????????!!                                                                                      
+                                                       !?????????G@@@@@@@@@@@@@@@????G@@@@@@@@@@G?????????????????????!:                                                      @@@@@@@@@@ @@@@@@    @@@@@@
+                                                    ??????????@@@@@@@@@@@@@@@@G????@@@@@@@@@@@G?????????????????????????????                                                  @@@@@@@@@@ @@@@@@    @@@@@@
+                                                :?????????P@@@@@@@@@@@@@@@@@P???G@@@@@@@@@@@P???????????????????????????????????::                                            @@@@G      @@@@@@?   @@@@@@
+                                             :?????????P@@@@@@@@@@@@@@@@@@???P@@@@@@@@@@@P???PG@@@@@@@@@@@@@?????????????????????????::                                       @@@@G      @@@@@@?   @@@@@@
+                                         :!????????PG@@@@@@@@@@@@@@@@@@G???G@@@@@@@@@@G??PG@@@@@@@@@@@@@@@@@@????????????????????????????!:                                   @@@@G      @@@@@@?  !@@@@@@
+                                      !?????????G@@@@@@@@@@@@@@@@@@@@P??G@@@@@@@@@@GP?P@@@@@@@@@@PPPP@@@@@@@@?????????????????????????????????!:                              @@@@G      @@@@@@@  G@@@@@@
+                                  :!?????????G@@@@@@@@@@@@@@@@@@@@@P??@@@@@@@@@@@P?P@@@@@@@@@P???????G@@@@@@P????????P@GGP????????????????????????!!                          @@@@G      @@@!@@@  G@@@@@@
+                               !??????????@@@@@@@@@@@PP@@@@@@@@@@??G@@@@@@@@@@P??@@@@@@@@@P?????????@@@@@@@P???????G@@@@@@@@@G?????????????????????????!                     :@@@@G      @@@:@@@  G@@@@@@
+                            !??????????@@@@@@@@@@@G?G@@@@@@@@@G?P@@@@@@@@@@G??G@@@@@@@@P??????????@@@@@@@@???????@@@@@@@@@@@@@??????????????????????????????                 :@@@@@@@@@@@@@@:@@@P G@@:@@@
+                         ??????????P@@@@@@@@@@@G???@@@@@@@@@G?@@@@@@@@@@@???@@@@@@@@G???????????G@@@@@@@P?????G@@@@@@@@@@@@@@?????????????????????????????????!              :@@@@@@@@@@@@@@ G@@P @@@:@@@
+                     :??????????P@@@@@@@@@@@G???G@@@@@@@@@GP@@@@@@@@@@P??P@@@@@@@@G???????????@@@@@@@@G????P@@@@@@@@@@@@@@@?????????????GGGP????????????????????:            :@@@@@PPPPP@@@@ G@@P @@@:@@@
+                  !??????????P@@@@@@@@@@@GP???P@@@@@@@@@G@@@@@@@@@@P???G@@@@@@@@P??????????P@@@@@@@@G????G@@@@@@@@@@@@@@@P???????????G@@@@@@@@@P????????????????!            :@@@@G     @@@@ G@@G @@@:@@@
+              :!??????????G@@@@@@@@@@@@P????P@@@@@@@@@@@@@@@@@@@G????G@@@@@@@G???????????G@@@@@@@@G????G@@@@@@@@@@@@@@@G??????????P@@@@@@@@@@@@@@ ???????????!:              :@@@@G     @@@@  @@@@@@?:@@@
+            ???????????P@@@@@@@@@@@@P?????P@@@@@@@@@@@@@@@@@@@?????G@@@@@@@G??????????P@@@@@@@@@P???P@@@@@@@@@@@@@@@@@P?????????G@@@@@@@@@@@@@@????????????:                 :@@@@G     @@@@  @@@@@@?:@@@
+         :??????????!@@@@@@@@@@@@P???????@@@@@@@@@@@@@@@@@@P?????@@@@@@@@P??????????G@@@@@@@@@P???@@@@@@@@@@@@@@@@@@G????????G@@@@@@@@@@@@@@@!??????????:                    :@@@@G     @@@@G @@@@@@?:@@@
+        ???????????????@@@@@@@G???????P@@@@@@@@@@@@@@@@@G??????@@@@@@@@??????????P@@@@@@@@@G???P@@@@@@@@@@@@@@@@@@@???????P@@@@@@@@@@@@@@@???????????!                       :@@@@G     @@@@G P@@@@@ :@@@
+       !?????????????????????????????@@@@@@@@@@@@@@@@G???????G@@@@@@G??????????G@@@@@@@@@P???G@@@@@@@@@@@@@@@@@@@???????@@@@@@@@@@@@@@@:??????????!                !PP       :@@@@G     @@@@G P@@@@@ :@@@
+          :!???????????????????????P@@@@@@@@@@@@@@@P???????P@@@@@@G?????????P@@@@@@@@@@P??P@@@@@@@@@@@@@@@@@@@@G?????G@@@@@@@@@@@@@@G??????????!:               :PPPPP!      :@@@@G     @@@@G  @@@@@ :@@@
+              !???????????????????!@@@@@@@@@@@@@P?????????G@@@@@G?????????G@@@@@@@@@G???P@@@@@@@@@@G@@@@@@@@@G????P@@@@@@@@@@@@@@P???????????!               :PPPPPPPPP      :@@@@G     @@@@G  @@@@P :@@@
+                 :!??????????????????P@@@@@@@G??????????P@@@@@@P???????P@@@@@@@@@@P???G@@@@@@@@@@PP@@@@@@@@@???PG@@@@@@@@@@@@@@???????????!                PPPPPPPPPPPP:                                 
+                     :??????????????????PGG????????????P@@@@@@G?????G@@@@@@@@@@@???P@@@@@@@@@@@P?@@@@@@@@@???G@@@@@@@@@@@@@@???????????!                PPPPPPPPPPPPPPP!                                 
+  PPP!                   ??????????????????????????????@@@@@@@@@@@@@@@@@@@@@@G???G@@@@@@@@@@@??P@@@@@@@@P?P@@@@@@@@@@@@@@????????????                ?PPPPPPPPPPPPPPPPP!                                 
+  PPPPPPP                   !?????????????????????????@@@@@@@@@@@@@@@@@@@@@????@@@@@@@@@@@@???@@@@@@@@@?@@@@@@@@@@@@@@P???????????                PPPPPPPPPPPPPPPPPPPPPP                                 
+ :PPPPPPPPPPP:                  !?????????????????????:@@@@@@@@@@@@@@@@@P???G@@@@@@@@@@@@???G@@@@@@@@@@@@@@@@@@@@@@G???????????!               !PPPPPPPPPPPPPPPPPPPPPPPP                                 
+ :PPPPPPPPPPPPPP:                  !????????????????????G@@@@@@@@@@@G?????G@@@@@@@@@@@G???P@@@@@@@@@@@@@@@@@@@@@G!??????????!               !PPPPPPPPPPPPPPPPPPPPPPPPPPP                                 
+ PPPPPPPPPPPPPPPPPP?:                 :!???????????????????????????????P@@@@@@@@@@@@G????@@@@@@@@@@@@@@@@@@@@G!???????????               :PPPPPPPPPPPPPPPPPPPPPPPPPPPPPP                                 
+ PPPPPPPPPPPPPPPPPPPPPP!                  :??????????????????????????P@@@@@@@@@@@@P????P@@@@@@@@@@@@@@@@@@@!???????????:              :PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP?                                
+ PPPPPPPPPPPPPPPPPPPPPPPPP?:                 :!?????????????????????@@@@@@@@@@@@??????@@@@@@@@@@@@@@@@@@????????????:               ?PPPPPPPPPPPPPPPPPPG@@@@@@GPPPPPPPPP?                                
+ PPPPPPPPPPPPPPPPPPPPPPPPPPPPP?                  :????????????????????G@@@@@@G??????G@@@@@@@@@@@@@@@@?????????????               ?PPPPPPPPPPPPPPPPPG@@@@@@@@@@@@@PPPPPPP?                                
+!PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP?                  ????????????????????@@P??????P@@@@@@@@@@@@@@@?????????????               PPPPPPPPPPPPPPPPPPP@@@@@@@@@@@@@@@@@PPPPPP?                                
+!PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP                  !????????????????????????G@@@@@@@@@@@@@P????????????               ?PPPPPPPPPPPPPPPPPPP@@@@@@@@@@@@@@@@@@@GPPPPP?                                
+!PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP:                  !????????????????????P@@@@@@@@@@:????????????:              !PPPPPPPPPPPPPPPPPPPPPG@@@@@@@@@GGG@@@@@@@@PPPPP?                                
+!PPPPPPPPPPG@@@GPPPPPPPPPPPPPPPPPPPPPPPPPPPP?!                 !????????????????????P@@@P?????????????!              !?PPPPPPPPPPPPPPPPPPPPPPPG@@@@@@@PPPPPPG@@@@@@GPPPPP                                
+!PPPPPPPG@@@@@@@@@GPPPPPPPPPPPPPPPPPPPPPPPPPPPPP!!                :!???????????????????????????????!:             :?PPPPPPPPPPPPPPPPPPPPPPPPPPP@@@@@@@PPPPPPP@@@@@@GPPPPP                                
+!PPPPPP@@@@@@@@@@@@@PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP?                 :??????????????????????????:             :?PPPPPPPPPPPPPPPPPPPPPPPPPPPPPP@@@@@@@PPPPPPPG@@@@@GPPPPP                                
+PPPPPP@@@@@@@@@@@@@@@PPP@@GPPPPPPPPPPPPPPPPPPPPPPPPPPPP?:                :????????????????????:              ?PPPPPPPPPPPPPPPPPPG@@@@@GPPPPPPPP@@@@@@@GPPPPPPG@@@@@@PPPPP                                
+PPPPPP@@@@@@@@@@@@@@@GPG@@@@@@GPPPPPPPPPPPPPPPPPPPPPPPPPPPP?                 :?????????????!              PPPPPPPPPPPPPPPPPPPP@@@@@@@@@@PPPPPPP@@@@@@@GPPPPPPP@@@@@@PPPPP                                
+PPPPPG@@@@@@PP@@@@@@@@P@@@@@@@@@@GPPPPPPPPPPPPPPPPPPPPPPPPPPPPP                  !??????!               PPPPPPPPPPPPPPPPPPPPG@@@@@@@@@@@@PPPPPP@@@@@@@@PPPPPPP@@@@@@PPPPP                                
+PPPPP@@@@@@PPPP@@@@@@@P@@@@@@@@@@@@@@GPPPPPPPPPPPPPPPPPPPPPPPPPPPP!:                !!:             :PPPPPPPPPPPPPPPPPPPPPPG@@@@@@@@@@@@@@PPPPPG@@@@@@@PPPPPPP@@@@@@PPPPP                                
+PPPPP@@@@@@GPPPG@@@@@GPG@@@@@@@@@@@@@@@GPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP!:                         !PPPPPPPPPPPPPPPPPPPPPPPPG@@@@@@@@@@@@@@@@PPPPG@@@@@@@PPPPPPP@@@@@@PPPPP                                
+PPPPP@@@@@@@PPPG@@@@@GPPPPG@@@@@@@@@@@@GPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP!                   !?PPPPPPPPPPPPPPPPPPPPPPPPPP@@@@@@@@PP@@@@@@@GPPPG@@@@@@@PPPPPPP@@@@@@PPPPPP                               
+PPPPP@@@@@@@GPP@@@@@@PPPPPG@@@@@@@@@@@@GPPPGG@GGPPPPPPPPPPPPPPPPPPPPPPPPPPPPP?             :?PPPPPPPPPPPPPPPPPPPPPPPPPPPPG@@@@@@@PPPP@@@@@@@PPPG@@@@@@@PPPPPPP@@@@@@PPPPPP                               
+PPPPPG@@@@@@@PP@@@@@@PPPPPG@@@@@@G@@@@@PPG@@@@@@@@@PPPPPPPPPPPPPPPPPPPPPPPPPPPPP:         PPPPPPPPPPPPPPPPG@@@@@@PPPPPPPP@@@@@@@GPPPPG@@@@@@PPPG@@@@@@@GPPPPPP@@@@@@PPPPPP                               
+PPPPPP@@@@@@@GPPPG@@GPPPPP@@@@@@@PPPP@PPG@@@@@@@@@@@GPPPPPPPPPPPPPPPPPPPPPPPPPPP:         PPPPPPPPPPPP@@@@@@@@@@@@@PPPPPG@@@@@@@PPPPPP@@@@@@GPPG@@@@@@@GPPPPPG@@@@@GPPPPPP                               
+PPPPPPG@@@@@@@PPPPPPPPPPPP@@@@@@@PPPPPPG@@@@@@@@@@@@@@PPPPPPPPPPPPPPPPPPPPPPPPPP:         PPPPPPPPP@@@@@@@@@@@@@@@@@PPPPG@@@@@@GPPPPPP@@@@@@@PPP@@@@@@@@PPPP@@@@@@@PPPPPPP                               
+PPPPPPP@@@@@@@@PPPPPPPPPPP@@@@@@@PPPPPP@@@@@@@@@@@@@@@GPPPPPPPPPPPPPPPPPPPPPPPPP:         PPPPPPPP@@@@@@@@@@@@@@@@@@@PPPG@@@@@@GPPPPPPG@@@@@@PPP@@@@@@@@PG@@@@@@@@GPPPPPPP                               
+PPPPPPPG@@@@@@@GPPPPPPPPPP@@@@@@@PPPPPG@@@@@@PPP@@@@@@@PPPG@@@@@@@GPPPPPPPPPPPPP:         PPPPPPPP@@@@@@@@@@@@@@@@@@@PPP@@@@@@@PPPPPPPG@@@@@@PPP@@@@@@@@@@@@@@@@@@PPPPPPPP                               
+PPPPPPPP@@@@@@@@PPPPPPPPPP@@@@@@@PPPPP@@@@@@PPPPG@@@@@@PPP@@@@@@@@@@@GPPPPPPPPPP:         PPPPPPPP@@@@@@@GPPPPG@@@@@@GPP@@@@@@@PPPPPPPG@@@@@@GPP@@@@@@@@@@@@@@@@GPPPPPPPPP                               
+PPPPPPPPP@@@@@@@@PPPPPPPPP@@@@@@GPPPPG@@@@@GPPPPP@@@@@@GPP@@@@@@@@@@@@@GPPPPPPPP:         PPPPPPPP@@@@@@@PPPPPP@@@@@@@PP@@@@@@@PPPPPPPP@@@@@@GPPG@@@@@@@@@@@@@@PPPPPPPPPPP                               
+PPPPPPPPPG@@@@@@@GPPPPPPPP@@@@@@GPPPP@@@@@@PPPPPP@@@@@@GPG@@@@@@@@@@@@@@@PPPPPPP:         PPPPPPPP@@@@@@@PPPPPPG@@@@@@PP@@@@@@@PPPPPPPP@@@@@@@PPG@@@@@@@@@@@GPPPPPPPPPPPPP                               
+PPPPPPPPPPG@@@@@@@GPPPPPPP@@@@@@GPPPP@@@@@@PPPPPP@@@@@@GPG@@@@@@@@@@@@@@@@PPPPPP:         PPPPPPPP@@@@@@@PPPPPPP@@@@@@PG@@@@@@@PPPPPPPP@@@@@@@PPG@@@@@@@@GPPPPPPPPPPPPPPPP                               
+PPPPPPPPPPP@@@@@@@@PPPPPPP@@@@@@GPPPG@@@@@GPPPPPP@@@@@@GPG@@@@@@PPG@@@@@@@GPPPPP:         PPPPPPPP@@@@@@@PPPPPPP@@@@@@GG@@@@@@GPPPPPPPP@@@@@@@PPG@@@@@@@GPPPPPPPPPPPPPPPPP                               
+PPPPPPPPPPPP@@@@@@@GPPPPPG@@@@@@GPPP@@@@@@GPPPPPP@@@@@@PP@@@@@@@PPPP@@@@@@@PPPPP:         PPPPPPPG@@@@@@@PPPPPPP@@@@@@GG@@@@@@GPPPPPPPP@@@@@@@PPG@@@@@@@@PPPPPPPPPPPPPPPPP                               
+PPPPPPPPPPPPG@@@@@@@GPPPPG@@@@@@GPPP@@@@@@PPPPPPP@@@@@@PP@@@@@@GPPPPP@@@@@@PPPPP:         PPPPPPPG@@@@@@@PPPPPPP@@@@@@GG@@@@@@GPPPPPPPPG@@@@@@PPP@@@@@@@@PPPPPPPPPPPPPPPPP                               
+PPPPPPPPPPPPPG@@@@@@@PPPPG@@@@@@PPPP@@@@@@PPPPPPP@@@@@@PG@@@@@@GPPPPP@@@@@@PPPPP:         PPPPPPPG@@@@@@@PPPPPPP@@@@@@GG@@@@@@GPPPPPPPPG@@@@@@PPP@@@@@@@@PPPPPPPPPPPPPPPPP                               
+PPPPPPPPPPPPPP@@@@@@@GPPP@@@@@@@PPPG@@@@@@PPPPPPP@@@@@@PG@@@@@@PPPPPP@@@@@@PPPPP:         PPPPPPPG@@@@@@@PPPPPPP@@@@@@GG@@@@@@GPPPPPPPPG@@@@@@PPP@@@@@@@@PPPPPPPPPPPPPPPPP                               
+PPPPPG@@PPPPPPG@@@@@@@PPP@@@@@@@PPPG@@@@@GPPPPPPG@@@@@GPG@@@@@@PPPPPP@@@@@@PPPPP:         PPPPPPPG@@@@@@@PPPPPPP@@@@@@PG@@@@@@GPPPPPPPPP@@@@@@PPP@@@@@@@@PPPPPPPPPPPPPPPPP                               
+PPPPP@@@@@@PPPP@@@@@@@GPP@@@@@@@PPP@@@@@@GPPPPPPG@@@@@PP@@@@@@@PPPPPP@@@@@@PPPPP:         PPPPPPPG@@@@@@@GPPPPPP@@@@@@PG@@@@@@@PPPPPPPPP@@@@@@PPP@@@@@@@@GPPPPPPPPPPPPPPPP                               
+PPPPP@@@@@@@PPPG@@@@@@@PP@@@@@@@PPP@@@@@@PPPPPPPG@@@@@PP@@@@@@GPPPPPP@@@@@@PPPPP:         PPPPPPPG@@@@@@@GPPPPPG@@@@@@PG@@@@@@@PPPPPPPPP@@@@@@PPPG@@@@@@@GPPPPPPPPPPPPPPPP                               
+PPPPG@@@@@@@PPPP@@@@@@@GP@@@@@@@PPP@@@@@@PPPPPPP@@@@@@PP@@@@@@GPPPPPG@@@@@@PPPPP:         PPPPPPPG@@@@@@@GPPPPP@@@@@@GPG@@@@@@@PPPPPPPPP@@@@@@PPPG@@@@@@@GPPPPPPPPPPPPPPPP                               
+PPPPG@@@@@@GPPPP@@@@@@@GP@@@@@@@PPP@@@@@@PPPPPPP@@@@@GPP@@@@@@GPPPPP@@@@@@@PPPPP          PPPPPPPG@@@@@@@GPPPG@@@@@@@PPG@@@@@@@PPPPPPPPP@@@@@@PPPP@@@@@@@GPPPPPPPPPPPPPPPP                               
+PPPPG@@@@@@GPPPP@@@@@@@GP@@@@@@@PPG@@@@@@PPPPPPP@@@@@GPG@@@@@@PPPPG@@@@@@@PPPPPP          PPPPPPPG@@@@@@@GPG@@@@@@@@GPPG@@@@@@@PPPPPPPPP@@@@@GPPPP@@@@@@@GPPPPPPPPPPPPPPPP                               
+PPPPG@@@@@@PPPPG@@@@@@@GP@@@@@@@PPG@@@@@@PPPPPPG@@@@@PPG@@@@@@@@@@@@@@@@@GPPPPPP          PPPPPPPG@@@@@@@@@@@@@@@@@GPPPP@@@@@@@GPPPPPPPP@@@@@GPPPP@@@@@@@GPPPPPPPPPPPPPPPP                               
+PPPPG@@@@@@GPPP@@@@@@@@PP@@@@@@@PPG@@@@@@PPPPPPG@@@@@PP@@@@@@@@@@@@@@@@@GPPPPPPP          PPPPPPPG@@@@@@@@@@@@@@@@GPPPPP@@@@@@@GPPPPPPPG@@@@@PPPPP@@@@@@@GPPPPPPPPPPPPPPPP                               
+PPPPP@@@@@@@@@@@@@@@@@GPP@@@@@@GPPG@@@@@GPPPPPP@@@@@GPP@@@@@@@@@@@@@@@@GPPPPPPPP          PPPPPPPG@@@@@@@@@@@@@@GPPPPPPPG@@@@@@@PPPPPPP@@@@@@PPPPP@@@@@@@@PPPPPPPPPPPPPPPP                               
+PPPPPP@@@@@@@@@@@@@@@@PPP@@@@@@GPP@@@@@@GPPPPPP@@@@@GPP@@@@@@@@@@@@@@@PPPPPPPPPP          PPPPPPPG@@@@@@@@@@@@GPPPPPPPPPG@@@@@@@GPPPPPG@@@@@GPPPPP@@@@@@@@PPPPPPPPPPPPPPP                                
+PPPPPPP@@@@@@@@@@@@@@PPPG@@@@@@GPP@@@@@@GPPPPPG@@@@@PPP@@@@@@@@GG@GGPPPPPPPPPPPP         ?PPPPPPP@@@@@@@@@@GPPPPPPPPPPPPP@@@@@@@@PPPPP@@@@@@PPPPPPG@@@@@GPPPPPPPPPPPPPPPP                                
+!PPPPPPPG@@@@@@@@@@GPPPPG@@@@@@PPPG@@@@@GPPPPP@@@@@@PPP@@@@@@@GPPPPPPPPPPPPPPPPP         ?PPPPPPP@@@@@@@@@PPPPPPPPPPPPPPPG@@@@@@@@PPG@@@@@@GPPPPPPG@@@PPPPPPPPPPPPPPPP?                                  
+!PPPPPPPPPPGG@@@GGPPPPPPG@@@@@@PPPG@@@@@GPPPPP@@@@@GPPP@@@@@@@GPPPPPPPPPPPPPPPPP         ?PPPPPPP@@@@@@@@@PPPPPPPPPPPPPPPP@@@@@@@@@@@@@@@@GPPPPPPPPPPPPPPPPPPPPPPPP!                                     
+ PPPPPPPPPPPPPPPPPPPPPPPG@@@@@@PPPP@@@@@@PPPP@@@@@@PPPG@@@@@@@GPPPPPPPPPPPPPPPPP         ?PPPPPPP@@@@@@@@@PPPPPPPPPPPPPPPPG@@@@@@@@@@@@@@GPPPPPPPPPPPPPPPPPPPPPPP                                        
+  :PPPPPPPPPPPPPPPPPPPPPG@@@@@@PPPP@@@@@@PPPG@@@@@@PPPG@@@@@@@GPPPPPPPPPPPPPPPPP         ?PPPPPPP@@@@@@@@@PPPPPPPPPPPPPPPPPG@@@@@@@@@@@@PPPPPPPPPPPPPPPPPPPPPP:                                          
+    !PPPPPPPPPPPPPPPPPPPPP@@@@@PPPPG@@@@@@PG@@@@@@PPPPG@@@@@@@GPPPPPPPPPPPPPPPPP         ?PPPPPPP@@@@@@@@@PPPPPPPPPPPPPPPPPPG@@@@@@@@@PPPPPPPPPPPPPPPPPPPPP:                                             
+      :PPPPPPPPPPPPPPPPPPPPPPGPPPPPP@@@@@@@@@@@@@@PPPP@@@@@@@@GPPPPPPPPPPPPPPPPP         ?PPPPPPP@@@@@@@@@PPPPPPPPPPPPPPPPPPPPG@@@@GPPPPPPPPPPPPPPPPPPPP!                                                
+         PPPPPPPPPPPPPPPPPPPPPPPPPPPP@@@@@@@@@@@@PPPPP@@@@@@@@GPPPPPPPPPPPPPPPPP         ?PPPPPPP@@@@@@@@@PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP                                                   
+           ?PPPPPPPPPPPPPPPPPPPPPPPPPP@@@@@@@@@@GPPPPP@@@@@@@@GPPPPPPPPPPPPPPPPP         ?PPPPPPP@@@@@@@@@PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP?:                                                     
+              ?PPPPPPPPPPPPPPPPPPPPPPPPG@@@@@@@PPPPPPP@@@@@@@@GPPPPPPPPPPPPPPPPP         ?PPPPPPP@@@@@@@@@PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP?!                                                        
+                !PPPPPPPPPPPPPPPPPPPPPPPPPPGGPPPPPPPPP@@@@@@@@GPPPPPPPPPPPPPPPPP         ?PPPPPPP@@@@@@@@@PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP!                                                           
+                   :PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP@@@@@@@@PPPPPPPPPPPPPPPPPP         ?PPPPPPP@@@@@@@@@PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP!                                                              
+                      :PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP@@@@@@@@PPPPPPPPPPPPPPPPPP         ?PPPPPPP@@@@@@@@@PPPPPPPPPPPPPPPPPPPPPPPPPPPPP?:                                                                
+                         :PPPPPPPPPPPPPPPPPPPPPPPPPPPP@@@@@@@@PPPPPPPPPPPPPPPPPP         ?PPPPPPP@@@@@@@@@PPPPPPPPPPPPPPPPPPPPPPPPPPP                                                                    
+                             PPPPPPPPPPPPPPPPPPPPPPPPPPP@@@@@@PPPPPPPPPPPPPPPPPP         ?PPPPPPP@@@@@@@@@PPPPPPPPPPPPPPPPPPPPPPPP                                                                       
+                                ?PPPPPPPPPPPPPPPPPPPPPPPPPG@@@PPPPPPPPPPPPPPPPPP         ?PPPPPPPG@@@@@@@GPPPPPPPPPPPPPPPPPPPPP                                                                          
+                                  :!PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP         ?PPPPPPPG@@@@@GPPPPPPPPPPPPPPPPPPPP!                                                                            
+                                      !PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP         ?PPPPPPPG@@GPPPPPPPPPPPPPPPPPPPP!                                                                               
+                                         :?PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP         ?PPPPPPPPPPPPPPPPPPPPPPPPPPPP!:                                                                                 
+                                             PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP         ?PPPPPPPPPPPPPPPPPPPPPPPPP?:                                                                                    
+                                                !PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP         ?PPPPPPPPPPPPPPPPPPPPPPP                                                                                        
+                                                    PPPPPPPPPPPPPPPPPPPPPPPPPPPP         ?PPPPPPPPPPPPPPPPPPPP                                                                                           
+                                                       ?PPPPPPPPPPPPPPPPPPPPPPPP         ?PPPPPPPPPPPPPPPPP                                                                                              
+                                                           !PPPPPPPPPPPPPPPPPPPP         ?PPPPPPPPPPPPPP:                                                                                                
+                                                              :!PPPPPPPPPPPPPPPP         ?PPPPPPPPPP?:                                                                                                   
+                                                                  :!PPPPPPPPPPP          ?PPPPPPPP:                                                                                                      
+                                                                      :PPPPPPPP          ?PPPPP:                                                                                                         
+                                                                           ?PPP          ?P?                                                                                                             
