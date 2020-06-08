@@ -1,7 +1,7 @@
 # GTA V  Radio
 GTA V radio stand alone program
 
-![example image](https://github.com/yobleck/gtav_radio/blob/master/images/example1.png){:width="200px"}
+![example image](https://github.com/yobleck/gtav_radio/blob/master/images/example1.png)
 
 ## WIP
 
