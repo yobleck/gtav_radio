@@ -1,9 +1,8 @@
 #main file
 #runs curses for ui and user input and spawns threads for the actual radio
-import curses;
+import curses, os;
 from curses import panel;
 import multiprocessing;
-#from multiprocessing import Process, Queue;
 import station_router;
 import time, math;
 
@@ -141,8 +140,9 @@ def main(stdscr):
             logo_scr.clear(); # get rid of logo
             logo_scr.box();
             logo_scr.refresh();
-            main_menu_scr.addstr(current_station,len(station_list[current_station-1])+2,"   ");
-            main_menu_scr.refresh();
+            if(isinstance(current_station,int)):
+                main_menu_scr.addstr(current_station,len(station_list[current_station-1])+2,"   "); #maybe put these in cleanup_now_playing
+                main_menu_scr.refresh();
         try: #kill audio_thread after it finishes    move closer to top of loop?
             if(audio_thread.is_alive() == False):
                 is_playing = kill_audio(audio_thread); #murder zombie child to prevent horde
@@ -207,4 +207,7 @@ def main(stdscr):
 
 
 #run! returns terminal to sane state if program crashes
-curses.wrapper(main); 
+if __name__ == "__main__":
+    if(os.name == "nt"): #mandatory for windows
+        multiprocessing.freeze_support();
+    curses.wrapper(main); 

@@ -1,21 +1,20 @@
 todo:
 
-replace hard coded file paths with os.listdir()
-
 resize the ascii art for larger windows and try braille
 
 research markov chains and finite state machines for radio logic. rename intro files to match songs
     m key to toggle song vs radio vs no ads/news mode   and display mode by now playing
 
-themes in the settings.ini file
-
 windows version
+
+
+todo low priority:
+
+themes in the settings.ini file
 
 dont use file for now playing. use multiprocessing variable pass through
 
-
-
-
+fix scaling on larger windows
 
 
 
