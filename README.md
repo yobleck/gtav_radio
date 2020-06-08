@@ -38,7 +38,7 @@ Backend:
  ## Controls
   - "esc" to quit program
   - "q" to stop station
-  - "i" and "k" to navigate stations (arrow keys currently cause crash)
+  - "i/w" and "k/s" to navigate stations (arrow keys currently cause crash)
   - "enter" to play station
   - "/" help menu
   - "m" mode switch (WIP)
