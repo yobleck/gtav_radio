@@ -1,4 +1,8 @@
 todo:
+m key to toggle song vs radio vs no ads/news mode  read and write from settings.ini
+
+new station files for ifruit and self radio
+
 program is pegging one cpu core. maybe use time.sleep() to make it chill out
 
 resize the ascii art for larger windows and try braille
@@ -7,9 +11,8 @@ save file for each station to pick up where left off (no seeking unfortunately)
 
 audio file overlap?
 
-research markov chains and finite state machines for radio logic. rename intro files to match songs
-    m key to toggle song vs radio vs no ads/news mode   and display mode by now playing
-    boils station.py files down into fewer files based on type of audio structure
+
+
 
 windows version
 
@@ -34,3 +37,5 @@ find ./to_mp3 -name '*.wav' | xargs -I $ ffmpeg -i $ -acodec libmp3lame $.mp3
 find . -name "*.wav.mp3" -print0 | xargs -0 rename ".wav.mp3" ".mp3"
 #for deleting
 find . -name "*.wav" | xargs -I $ rm $
+#for moving
+find . -name "*.mp3" | xargs -I "{}" mv {} ./mono_ads

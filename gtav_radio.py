@@ -32,7 +32,7 @@ def draw_logo(input_station_list, input_window): #TODO: use getmaxyx to automati
         input_window.addstr(y+1,1,logo_file[y][:-2]);
     input_window.refresh();
     
-def cleanup_now_playing(input_window):
+def cleanup_now_playing(input_window): #TODO:replace with write_to_now_playing.py
     f = open("./stations/now_playing.txt","w"); #resets now playing file when program closes
     f.write("Now Playing: Welcome to GTA V Radio");
     f.close();
@@ -50,6 +50,7 @@ def main(stdscr):
     station_list = ["LOS SANTOS ROCK RADIO", "NON STOP POP FM", "RADIO LOS SANTOS", "CHANNEL X", "WEST COAST TALK RADIO 95.6", "REBEL RADIO", "SOULWAX FM", "EAST LOS FM", "WEST COAST CLASSICS", "BLAINE COUNTY TALK RADIO", "THE BLUE ARK", "WORLDWIDE FM", "FLYLO FM", "THE LOW DOWN 91.1", "RADIO MIRROR PARK", "SPACE 103.2", "VINEWOOD BOULEVARD RADIO", "THE LAB", "BLONDED LOS SANTOS 97.8 FM", "LOS SANTOS UNDERGROUND RADIO", "iFRUIT RADIO", "SELF RADIO"];
     current_station = None; #read from settings.ini and auto play if not none
     highlighted_station = 1; #should be 0 but seee qqqqqqqq issue
+    mode = "music_only";
     running = True;
     is_playing = False;
     
