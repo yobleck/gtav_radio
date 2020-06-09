@@ -194,7 +194,7 @@ def main(stdscr):
         
         #read file to get now playing. jank workaround cause I couldn't be bothered to learn multiprocessing.Value
         now_playing_counter += 1;
-        if(now_playing_counter % 1000000 == 0 and main_menu_in_focus): #massive number to avoid unnecessary file IO
+        if(now_playing_counter % 100 == 0 and main_menu_in_focus): #massive number to avoid unnecessary file IO. see sleep
             now_playing_counter = 0;
             f = open("./stations/now_playing.txt","r");
             now_playing_scr.clear();
@@ -202,6 +202,7 @@ def main(stdscr):
             f.close();
             now_playing_scr.refresh();
         
+        time.sleep(.01); #this is to try and reduce cpu usage. more testing needed
 #####end while loop
     cleanup_now_playing(now_playing_scr);
 

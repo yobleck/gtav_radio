@@ -1,9 +1,15 @@
 todo:
+program is pegging one cpu core. maybe use time.sleep() to make it chill out
 
 resize the ascii art for larger windows and try braille
 
+save file for each station to pick up where left off (no seeking unfortunately)
+
+audio file overlap?
+
 research markov chains and finite state machines for radio logic. rename intro files to match songs
     m key to toggle song vs radio vs no ads/news mode   and display mode by now playing
+    boils station.py files down into fewer files based on type of audio structure
 
 windows version
 
@@ -15,6 +21,8 @@ themes in the settings.ini file
 dont use file for now playing. use multiprocessing variable pass through
 
 fix scaling on larger windows
+
+
 
 
 
