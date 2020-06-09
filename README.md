@@ -30,14 +30,14 @@ Backend:
 
 ## Installation:
   - Download from here
-  - make sure python 3.8 or later is installed
+  - make sure python 3.7 or later is installed
   - type 'pip install playsound' in terminal
   - if on windows type 'pip install windows-curses' in terminal
   - download gstreamer if on linux
   - files to be downloaded from 3rd party and placed in audio_files folder where gtav_radio.py is located
     - audio files not included here for legal reasons
     - aHR0cHM6Ly9tZWdhLm56L2ZpbGUvbkZkV2lBREwjd1lJcm4zSXloMEh6MTZUemNsNzVmd0EyT053NHVOMXZSVDh2c042dUxuOA==
-  - To run open terminal and type cd "file/path/to/gtav_radio.py"
+  - To run open terminal and type cd "file/path/to/gtav_radio-master"
   - Then type python gtav_radio.py
   - (standalone version with no dependencies to come)
     
