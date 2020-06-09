@@ -1,0 +1,6 @@
+audio_files/
+temp/
+__pycache__/
+stations/wip/
+stations/__pycache__/
+images/*.png/
