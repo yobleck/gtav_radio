@@ -39,6 +39,7 @@ Backend:
   - To run open terminal and type cd "file/path/to/gtav_radio-master"
   - Then type python gtav_radio.py
   - (standalone version with no dependencies to come)
+  - self radio songs are placed in ./audio_files/SELF RADIO/songs
     
  ## Controls
   - "esc" to quit program
