@@ -11,7 +11,7 @@ def branching(input_list, input_dir, input_type):
     rand = choice(input_list);
     input_list.remove(rand);
     write_to_now_playing(rand);
-    #playsound(input_dir + input_type + rand); #comment this out to speed up debugging
+    playsound(input_dir + input_type + rand); #comment this out to speed up debugging
     return rand;
     
 ####################
