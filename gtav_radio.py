@@ -30,7 +30,7 @@ def draw_logo(input_station_list, input_window): #TODO: use getmaxyx to automati
     input_window.erase();
     input_window.box();
     for y in range(0, len(logo_file)):
-        input_window.addstr(y+1,1,logo_file[y][:-2]);
+        input_window.addstr(y+1,1,logo_file[y][:-1]);
     input_window.refresh();
     
 def cleanup_now_playing(input_window): #TODO:replace with write_to_now_playing.py
@@ -46,23 +46,25 @@ def main(stdscr):
     curses.use_default_colors();
     curses.curs_set(0);
     term_h, term_w = stdscr.getmaxyx();
+    if(term_w < 50 or term_h < 25):
+        raise Exception("Window size is too small");
     
     #other initializers
     station_list = ["LOS SANTOS ROCK RADIO", "NON STOP POP FM", "RADIO LOS SANTOS", "CHANNEL X", "WEST COAST TALK RADIO 95.6", "REBEL RADIO", "SOULWAX FM", "EAST LOS FM", "WEST COAST CLASSICS", "BLAINE COUNTY TALK RADIO", "THE BLUE ARK", "WORLDWIDE FM", "FLYLO FM", "THE LOW DOWN 91.1", "RADIO MIRROR PARK", "SPACE 103.2", "VINEWOOD BOULEVARD RADIO", "THE LAB", "BLONDED LOS SANTOS 97.8 FM", "LOS SANTOS UNDERGROUND RADIO", "iFRUIT RADIO", "SELF RADIO"];
-    current_station = None; #read from settings.ini and auto play if not none
+    current_station = None; #read from settings.ini and auto play if not None and autoplay is True
     highlighted_station = 1; #should be 0 but seee qqqqqqqq issue
     running = True;
     is_playing = False;
     
     #displays logo
-    logo_scr = curses.newwin(term_h-2,math.floor(term_w/2),0,0); #(height, width, start_y, start_x)
+    logo_scr = curses.newwin(term_h-2,term_w-34,0,0); #(height, width, start_y, start_x)  #old width: math.floor(term_w/2)
     logo_scr.box();
     #logo_scr.addstr(1,1,"logo");
     #draw_logo(station_list[0], 20, logo_scr);
     logo_scr.refresh();
     
     #displays list of stations
-    main_menu_scr = curses.newwin(math.floor(term_h)-1,math.floor(term_w/2),0,math.floor(term_w/2));
+    main_menu_scr = curses.newwin(math.floor(term_h)-1,34,0,term_w-34); #34 old width and start_x: math.floor(term_w/2)
     main_menu_scr.box();
     for x in range(1,len(station_list)+1):
         main_menu_scr.addnstr(x,1,station_list[x-1],main_menu_scr.getmaxyx()[1]-2);
