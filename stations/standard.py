@@ -89,7 +89,7 @@ def __play_radio(input_station, mode): #TODO: read if ads_news or no from settin
                 if(not temp_time):
                     temp_time = list(time_ml);
             
-            if(rng < 0.125 and rng > 0.0): # play ads or news
+            if(rng < 0.125 and rng > 0.0 and mode == "full_radio"): # play ads or news
                 to_what = branching(temp_to, station_dir, type_list[4]); #plays "to" ad or news
                 if("AD" in to_what):
                     branching(temp_ad, "./audio_files/RADIO_ADVERTS/", type_list[5]); #plays actual ad
@@ -101,8 +101,10 @@ def __play_radio(input_station, mode): #TODO: read if ads_news or no from settin
                     temp_ad = list(ad_ml);
                 if(not temp_news):
                     temp_news = list(news_ml);
+            if(rng < 0.125 and rng > 0.0 and mode == "no_ads_news"): # don't play ads or news
+                pass;
             
-            branching(temp_id, station_dir, type_list[4]); #play staion id
+            branching(temp_id, station_dir, type_list[2]); #play staion id
             if(not temp_id):
                 temp_id = list(id_ml);
             
