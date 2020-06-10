@@ -17,14 +17,14 @@ Backend:
 
 ## OS Versions:
   ### Functioning:
-    - early Linux beta
+    - Linux beta
     - early windows beta
   ### WIP:
-    Linux more features
+    Linux polishing up
     Windows 7 (which will hopefully work with 8-10 as well)
-  ### Coming:
+  ### Maybe Coming:
     Android through termux app?
-  ### Probably not happening:
+  ### Probably NOT Happening:
     MacOS, iOS
     website, electron webapp
 
