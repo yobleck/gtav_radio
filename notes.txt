@@ -1,5 +1,11 @@
 todo:
 m key to toggle song vs radio vs no ads/news mode  read and write from settings.ini
+somethings still fucked up with radio mode
+
+test local playsound file by uninstalling system
+and adding print line to local file
+
+explain debugging through station_router.route(num) in readme
 
 new station files for ifruit and self radio
 
@@ -9,12 +15,11 @@ resize the ascii art for larger windows and try braille
 
 save file for each station to pick up where left off (no seeking unfortunately)
 
-audio file overlap?
 
 
 
 
-windows version
+windows version:
 
 
 todo low priority:
@@ -25,8 +30,7 @@ dont use file for now playing. use multiprocessing variable pass through
 
 fix scaling on larger windows
 
-
-
+audio file overlap?
 
 
 

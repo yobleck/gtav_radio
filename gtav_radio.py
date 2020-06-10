@@ -4,6 +4,7 @@ import curses, os;
 from curses import panel;
 import multiprocessing;
 import station_router;
+import radio_settings;
 import time, math;
 
 #various helper functions
@@ -50,7 +51,6 @@ def main(stdscr):
     station_list = ["LOS SANTOS ROCK RADIO", "NON STOP POP FM", "RADIO LOS SANTOS", "CHANNEL X", "WEST COAST TALK RADIO 95.6", "REBEL RADIO", "SOULWAX FM", "EAST LOS FM", "WEST COAST CLASSICS", "BLAINE COUNTY TALK RADIO", "THE BLUE ARK", "WORLDWIDE FM", "FLYLO FM", "THE LOW DOWN 91.1", "RADIO MIRROR PARK", "SPACE 103.2", "VINEWOOD BOULEVARD RADIO", "THE LAB", "BLONDED LOS SANTOS 97.8 FM", "LOS SANTOS UNDERGROUND RADIO", "iFRUIT RADIO", "SELF RADIO"];
     current_station = None; #read from settings.ini and auto play if not none
     highlighted_station = 1; #should be 0 but seee qqqqqqqq issue
-    mode = "music_only";
     running = True;
     is_playing = False;
     
@@ -79,8 +79,9 @@ def main(stdscr):
     now_playing_counter = 0;
     
     #mode screen
+    mode = radio_settings.get_mode();
     mode_scr = curses.newwin(1,math.floor(term_w/4),term_h-1,math.floor(3*term_w/4));
-    mode_scr.addnstr("Mode: music_only",mode_scr.getmaxyx()[1]);
+    mode_scr.addnstr("Mode: " + mode, mode_scr.getmaxyx()[1]);
     mode_scr.refresh();
     
     #displays settings menu
@@ -191,7 +192,19 @@ def main(stdscr):
                 
         
         if(x == 109): # m key for mode toggling currently not enabled
-            pass;
+            if(mode == "music_only"):
+                radio_settings.set_mode("no_ads_news");
+                mode = "no_ads_news";
+            elif(mode == "no_ads_news"):
+                radio_settings.set_mode("full_radio");
+                mode = "full_radio";
+            elif(mode == "full_radio"):
+                radio_settings.set_mode("music_only");
+                mode = "music_only";
+            mode_scr.clear();
+            mode_scr.addnstr("Mode: " + mode, mode_scr.getmaxyx()[1]);
+            mode_scr.refresh();
+        
         
         #read file to get now playing. jank workaround cause I couldn't be bothered to learn multiprocessing.Value
         now_playing_counter += 1;
