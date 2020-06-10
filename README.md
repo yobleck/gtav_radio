@@ -33,7 +33,7 @@ Backend:
   - make sure python 3.7 or later is installed
   - if on windows type 'pip install windows-curses' in terminal
   - download gstreamer if on linux
-  - files to be downloaded from 3rd party and placed in audio_files folder where gtav_radio.py is located
+  - audio files to be ripped from game or downloaded from 3rd party and placed in audio_files folder where gtav_radio.py is located
     - audio files not included here for legal reasons
     - aHR0cHM6Ly9tZWdhLm56L2ZpbGUvckpNSGdZclQjLUtyOEJKbkV1NGd6cXh6YUdVUnRSNF96RlNWMTctY1hWRWNYNHhCTFNJTQ==
   - To run open terminal and type cd "file/path/to/gtav_radio-master"
