@@ -24,7 +24,7 @@ Backend:
     Windows 7 (which will hopefully work with 8-10 as well)
   ### Maybe Coming:
     Android through termux app?
-      - [termux play audio](https://github.com/termux/play-audio) looks promising
+   - [termux play audio](https://github.com/termux/play-audio/) looks promising
   ### Probably NOT Happening:
     MacOS, iOS
     website, electron webapp
