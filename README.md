@@ -18,12 +18,13 @@ Backend:
 ## OS Versions:
   ### Functioning:
     - Linux beta
-    - early windows beta
+    - windows 7 beta
   ### WIP:
     Linux polishing up
     Windows 7 (which will hopefully work with 8-10 as well)
   ### Maybe Coming:
     Android through termux app?
+      - [termux play audio](https://github.com/termux/play-audio) looks promising
   ### Probably NOT Happening:
     MacOS, iOS
     website, electron webapp
@@ -38,8 +39,10 @@ Backend:
     - aHR0cHM6Ly9tZWdhLm56L2ZpbGUvckpNSGdZclQjLUtyOEJKbkV1NGd6cXh6YUdVUnRSNF96RlNWMTctY1hWRWNYNHhCTFNJTQ==
   - To run open terminal and type cd "file/path/to/gtav_radio-master"
   - Then type python gtav_radio.py
-  - (standalone version with no dependencies to come)
+  
   - self radio songs are placed in ./audio_files/SELF RADIO/songs
+  - these instructions assume some basic familiarity with the command line.
+  - (standalone version with no dependencies to come)
     
  ## Controls
   - "esc" to quit program
@@ -47,4 +50,4 @@ Backend:
   - "i/w" and "k/s" to navigate stations (arrow keys currently cause crash)
   - "enter" to play station
   - "/" help menu
-  - "m" mode switch (WIP)
+  - "m" mode switch (full radio / no ads or news WIP / music only
