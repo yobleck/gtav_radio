@@ -16,7 +16,7 @@ def branching(input_list, input_dir, input_type):
     
 ####################
 
-def __play_radio(input_station, mode): #TODO: read if ads_news or no from settings.ini
+def __play_radio(input_station, mode):
     station_dir =  "./audio_files/" + input_station + "/";
     
     #master lists and temp lists
@@ -30,13 +30,15 @@ def __play_radio(input_station, mode): #TODO: read if ads_news or no from settin
     ad_ml = os.listdir("./audio_files/RADIO_ADVERTS/");
     news_ml = os.listdir("./audio_files/RADIO_NEWS/");
     
+    songs_with_no_intro = 0;
     for song in songs_intro_ml: #this is for linking intro files to their respective songs so they stay in sync
         temp_list = [];
         for intro in intro_ml:
             if(song[:-4] in intro): #some songs may not have intro files
                 temp_list.append(intro);
         songs_intro_ml[songs_intro_ml.index(song)] = [songs_intro_ml[songs_intro_ml.index(song)],temp_list];
-    
+        if(not temp_list):
+            songs_with_no_intro += 1;
     
     temp_songs_intro = [];
     for x in range(0,len(songs_intro_ml)): #this is for transfering contents of the master list to the temp list
@@ -48,6 +50,7 @@ def __play_radio(input_station, mode): #TODO: read if ads_news or no from settin
     
     type_list = ["mono_solo/", "general/", "id/", "time/", "to/", ""]; #for passing folder structure to branching func
     next_song = None;
+    
     
     playing = True;
     while(playing):
@@ -65,7 +68,7 @@ def __play_radio(input_station, mode): #TODO: read if ads_news or no from settin
             playsound(station_dir + "songs/" + rand_song); #print("play song", rand_song);
         
         #these are for repopulating empty lists
-        if(len(temp_songs_intro) <= 3): #value is 3 because of songs with no intro crashing program. may need to be raised
+        if(len(temp_songs_intro) <= songs_with_no_intro): #repopulates songs_intro before is empty cause crash when rng<.5 and no songs with intro
             temp_songs_intro.clear();
             for x in range(0,len(songs_intro_ml)):
                 temp_songs_intro.append(songs_intro_ml[x]);
@@ -140,11 +143,7 @@ def __play_music_only(input_station):
     
 ####################
 
-def play(input_station): #TODO: implement modes later
-    #try: #I made this fucked up one liner for fun. I'll probably never remember how it works. Good luck future me.
-        #mode = [j for j in ["music_only","full_radio","no_ads_news"] if j in re.search("mode=(.+?)\\n",[i for i in open("./settings.ini","r").readlines() if "mode=" in i][0]).group(1)][0];
-    #except:
-        #raise Exception("Invalid mode in settings.ini \n make sure there is a setting called mode= \n with a value of full_radio , no_ads_news or music_only ");
+def play(input_station):
     mode = radio_settings.get_mode();
     if(mode == "music_only"):
         __play_music_only(input_station);
