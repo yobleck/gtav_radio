@@ -21,8 +21,8 @@ def play(input_station): #ignore modes once implemented
         id_ml = os.listdir(source_dir + "/id/");
         mono_solo_ml = os.listdir(source_dir + "mono_solo/");
     
-    temp_id = id_ml;
-    temp_mono_solo = mono_solo_ml;
+    temp_id = list(id_ml);
+    temp_mono_solo = list(mono_solo_ml);
     
     playing = True; #TODO: pause feature
     while(playing):
@@ -38,9 +38,9 @@ def play(input_station): #ignore modes once implemented
         
         #repopulate temp lists when empty
         if(not temp_id):
-            temp_id = id_ml;
+            temp_id = list(id_ml);
         if(not temp_mono_solo):
-            temp_mono_solo = mono_solo_ml;
+            temp_mono_solo = list(mono_solo_ml);
             
 #if __name__ == "__play__": #needed for windows?
     #play();

@@ -11,7 +11,7 @@ def play(input_station): #ignore modes once implemented
     source_dir = "./audio_files/" + input_station + "/songs/";
     songs_ml = os.listdir(source_dir);
     
-    temp_songs = songs_ml;
+    temp_songs = list(songs_ml);
     
     playing = True;
     while(playing):
@@ -22,6 +22,6 @@ def play(input_station): #ignore modes once implemented
         temp_songs.remove(rand_song);
         
         if(not temp_songs):
-            temp_songs = songs_ml;
+            temp_songs = list(songs_ml);
         
 #windows if name main
