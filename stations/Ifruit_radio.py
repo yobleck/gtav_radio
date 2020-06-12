@@ -11,10 +11,8 @@ def run():
     intro_ml = os.listdir(station_dir + "intro/");
     id_ml = os.listdir(station_dir + "id/");
     time_ml = os.listdir(station_dir + "time/");
-    ad_ml = [];
-    news_ml = [];
     
-    temp_song_list = song_ml;
+    temp_song_list = list(song_ml);
     while(temp_song_list):
         num = random.randint(0,len(temp_song_list)-1); #rng
         f = open("./stations/now_playing.txt","w"); #for now playing
@@ -22,6 +20,8 @@ def run():
         f.close();
         playsound(station_dir + "songs/" + temp_song_list[num]); #play song
         temp_song_list.pop(num); #remove from list so only plays once
+        if(not temp_song_list):
+            temp_song_list = list(song_ml);
         
         
     
