@@ -59,8 +59,7 @@ def main(stdscr):
     #displays logo
     logo_scr = curses.newwin(term_h-2,term_w-34,0,0); #(height, width, start_y, start_x)  #old width: math.floor(term_w/2)
     logo_scr.box();
-    #logo_scr.addstr(1,1,"logo");
-    #draw_logo(station_list[0], 20, logo_scr);
+    #draw_logo(station_list[0], 20, logo_scr); # TODO: draw logo for autoplay
     logo_scr.refresh();
     
     #displays list of stations
@@ -95,6 +94,7 @@ def main(stdscr):
     settings_scr.addstr("\"enter\" to select station\n");
     settings_scr.addstr("\"q\" to stop station\n");
     settings_scr.addstr("\"m\" to toggle full_radio/music_only/no_ads_news mode\n");
+    settings_scr.addstr("\t Station must be restarted to take effect\n");
     settings_scr.addstr("Created by yobleck: https:/www.github.com/yobleck/gtav_radio\n");
     settings_scr.addstr("All artworks are copyright of Rockstar\n");
     settings_scr.addstr("All songs copyright of their respective owners\n");
@@ -128,7 +128,7 @@ def main(stdscr):
                     main_menu_scr.addstr(current_station,len(station_list[current_station-1])+2,"   "); #remove current station arrow
             current_station = highlighted_station; #get highlight number and set current station
             #call play to specific station
-            audio_thread = create_thread(current_station); #TODO:replace with current_station once station code is ready
+            audio_thread = create_thread(station_list[current_station-1]); #TODO:replace with current_station once station code is ready
             audio_thread.start();
             is_playing = True;
             draw_logo(station_list[current_station-1], logo_scr);
