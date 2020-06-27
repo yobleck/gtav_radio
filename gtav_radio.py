@@ -80,7 +80,7 @@ def main(stdscr):
     now_playing_counter = 0;
     
     #mode screen
-    mode = radio_settings.get_mode();
+    mode = radio_settings.get_setting("mode=");
     mode_scr = curses.newwin(1,math.floor(term_w/4),term_h-1,math.floor(3*term_w/4));
     mode_scr.addnstr("Mode: " + mode, mode_scr.getmaxyx()[1]);
     mode_scr.refresh();
@@ -193,15 +193,15 @@ def main(stdscr):
                 main_menu_in_focus = True;
                 
         
-        if(x == 109): # m key for mode toggling currently not enabled
+        if(x == 109): # m key for mode toggling
             if(mode == "music_only"):
-                radio_settings.set_mode("no_ads_news");
+                radio_settings.set_setting("mode=", "no_ads_news");
                 mode = "no_ads_news";
             elif(mode == "no_ads_news"):
-                radio_settings.set_mode("full_radio");
+                radio_settings.set_setting("mode=", "full_radio");
                 mode = "full_radio";
             elif(mode == "full_radio"):
-                radio_settings.set_mode("music_only");
+                radio_settings.set_setting("mode=", "music_only");
                 mode = "music_only";
             mode_scr.clear();
             mode_scr.addnstr("Mode: " + mode, mode_scr.getmaxyx()[1]);
