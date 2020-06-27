@@ -144,7 +144,7 @@ def __play_music_only(input_station):
 ####################
 
 def play(input_station):
-    mode = radio_settings.get_mode();
+    mode = radio_settings.get_setting("mode=");
     if(mode == "music_only"):
         __play_music_only(input_station);
     else:
