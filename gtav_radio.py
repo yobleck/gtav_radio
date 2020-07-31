@@ -2,7 +2,7 @@
 #runs curses for ui and user input and spawns threads for the actual radio
 import curses, os;
 from curses import panel;
-import multiprocessing;
+import multiprocessing; from multiprocessing import shared_memory;
 import station_router;
 import radio_settings;
 import time, math;
@@ -31,12 +31,6 @@ def draw_logo(input_station_list, input_window): #TODO: use getmaxyx to automati
     input_window.box();
     for y in range(0, len(logo_file)):
         input_window.addstr(y+1,1,logo_file[y][:-1]);
-    input_window.refresh();
-    
-def cleanup_now_playing(input_window): #TODO:replace with write_to_now_playing.py
-    f = open("./stations/now_playing.txt","w"); #resets now playing file when program closes
-    f.write("Now Playing: Welcome to GTA V Radio");
-    f.close();
     input_window.refresh();
 
 
@@ -73,11 +67,9 @@ def main(stdscr):
     
     #now playing screen
     now_playing_scr = curses.newwin(1,math.floor(3*term_w/4),term_h-1,0);
-    f = open("./stations/now_playing.txt","r");
-    now_playing_scr.addnstr(f.readline(),now_playing_scr.getmaxyx()[1]);
-    f.close();
+    now_playing_scr.addnstr("Now Playing: Welcome to GTAV Radio",now_playing_scr.getmaxyx()[1]);
     now_playing_scr.refresh();
-    now_playing_counter = 0;
+    now_playing_sm = shared_memory.SharedMemory(name="now_playing",create=True,size=40); #sm obj that can be accesed across multiple processes
     
     #mode screen
     mode = radio_settings.get_setting("mode=");
@@ -140,18 +132,17 @@ def main(stdscr):
         #kill audio with "q"
         if(x == 113 and "audio_thread" in locals()): 
             is_playing = kill_audio(audio_thread);
-            cleanup_now_playing(now_playing_scr);
+            now_playing_scr.addnstr(0,0,"Now Playing: Welcome to GTAV Radio",now_playing_scr.getmaxyx()[1]);
             logo_scr.clear(); # get rid of logo
             logo_scr.box();
             logo_scr.refresh();
             if(isinstance(current_station,int)):
-                main_menu_scr.addstr(current_station,len(station_list[current_station-1])+2,"   "); #maybe put these in cleanup_now_playing
+                main_menu_scr.addstr(current_station,len(station_list[current_station-1])+2,"   "); #clears "<--"
                 main_menu_scr.refresh();
         try: #kill audio_thread after it finishes    move closer to top of loop?
             if(audio_thread.is_alive() == False):
                 is_playing = kill_audio(audio_thread); #murder zombie child to prevent horde
                 current_station = None;
-                cleanup_now_playing(now_playing_scr);
         except:
             pass;
         
@@ -208,20 +199,16 @@ def main(stdscr):
             mode_scr.refresh();
         
         
-        #read file to get now playing. jank workaround cause I couldn't be bothered to learn multiprocessing.Value
-        now_playing_counter += 1;
-        if(now_playing_counter % 100 == 0 and main_menu_in_focus): #massive number to avoid unnecessary file IO. see sleep
-            now_playing_counter = 0;
-            f = open("./stations/now_playing.txt","r");
+        #read file to get now playing. # TODO: multiprocessing.sharememory          new in py3.8?
+        if(main_menu_in_focus and is_playing): #massive number to avoid unnecessary file IO. see sleep
             now_playing_scr.clear();
-            now_playing_scr.addnstr(0,0,f.readline(),now_playing_scr.getmaxyx()[1]);
-            f.close();
+            now_playing_scr.addnstr(0,0,"Now Playing: " + "".join(chr(i) for i in now_playing_sm.buf).rstrip("\0"),now_playing_scr.getmaxyx()[1]); #read from shared memory object and write to screen
             now_playing_scr.refresh();
         
         time.sleep(.01); #this is to try and reduce cpu usage. more testing needed
 #####end while loop
-    cleanup_now_playing(now_playing_scr);
-
+    now_playing_sm.close(); #safely escape shared memory object
+    now_playing_sm.unlink();
 
 #run! returns terminal to sane state if program crashes
 if __name__ == "__main__":
