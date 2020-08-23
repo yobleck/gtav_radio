@@ -31,7 +31,7 @@ Backend:
 
 ## Installation:
   - Download from here
-  - make sure python 3.7 or later is installed
+  - make sure python 3.8 or later is installed
   - if on windows type 'pip install windows-curses' in terminal
   - download gstreamer if on linux
   - audio files to be ripped from game or downloaded from 3rd party and placed in audio_files folder where gtav_radio.py is located
