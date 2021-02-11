@@ -51,3 +51,6 @@ Backend:
   - "enter" to play station
   - "/" help menu
   - "m" mode switch (full radio / no ads or news WIP / music only
+  
+  ## TODO
+  - radio station transition sound effect when switching between two stations
