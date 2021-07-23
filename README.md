@@ -47,7 +47,7 @@ Backend:
  ## Controls
   - "esc" to quit program
   - "q" to stop station
-  - "i/w" and "k/s" to navigate stations (arrow keys currently cause crash)
+  - "i/w/up" and "k/s/down" to navigate stations
   - "enter" to play station
   - "/" help menu
   - "m" mode switch (full radio / no ads or news WIP / music only
